@@ -1,0 +1,18 @@
+{
+  "name": "Commit Message Generation",
+  "version": "1.0.0",
+  "description": "This project aims to evaluate ChatGPT behavior in commit message generation under four different approaches.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago Abreu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
+  }
+}

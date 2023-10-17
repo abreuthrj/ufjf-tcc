@@ -1,0 +1,107 @@
+[
+  {
+    "file": "package.json",
+    "commits": [
+      {
+        "diff": "\"karma-remap-coverage\": \"^0.1.4\",\n\"karma-sourcemap-loader\": \"^0.3.7\",\n\"karma-webpack\": \"1.8.1\",\n- \"ng-router-loader\": \"^1.0.0\",\n+ \"ng-router-loader\": \"^1.0.1\",\n\"ngc-webpack\": \"^1.0.2\",\n\"ngrx-store-freeze\": \"0.1.6\",\n\"node-sass\": \"^4.1.1\",\n",
+        "message": "fix ng-router-loader"
+      },
+      {
+        "diff": "\"karma-remap-coverage\": \"^0.1.4\",\n\"karma-sourcemap-loader\": \"^0.3.7\",\n\"karma-webpack\": \"1.8.1\",\n- \"ng-router-loader\": \"^1.0.1\",\n+ \"ng-router-loader\": \"^1.0.2\",\n\"ngc-webpack\": \"^1.0.2\",\n\"ngrx-store-freeze\": \"0.1.6\",\n\"node-sass\": \"^4.1.1\",\n",
+        "message": "fix ng-router-loader version"
+      },
+      {
+        "diff": "\"build:prod:desktop\": \"npm run build:prod:desktop:renderer && npm run build:prod:desktop:main\",\n\"build:prod:desktop:main\": \"webpack --config config/advance/webpack.desktop.build.main.js --progress --profile --bail\",\n\"build:prod:desktop:renderer\": \"webpack --config config/advance/webpack.desktop.build.renderer.js --progress --profile --bail\",\n- \"ci:aot\": \"npm run test && npm run build:aot && npm run e2e && npm run build:aot:desktop\",\n- \"ci:jit\": \"npm run test && npm run build:prod && npm run e2e && npm run build:desktop\",\n+ \"ci:aot\": \"npm run test && npm run build:aot && npm run e2e\",\n+ \"ci:jit\": \"npm run test && npm run build:prod && npm run e2e\",\n\"ci:nobuild\": \"npm test && npm run e2e\",\n- \"ci:testall\": \"npm run test && npm run build:prod && npm run e2e && npm run build:aot && npm run e2e && npm run build:desktop && npm run build:aot:desktop\",\n+ \"ci:testall\": \"npm run test && npm run build:prod && npm run e2e && npm run build:aot && npm run e2e\",\n\"ci\": \"npm run ci:testall\",\n\"clean\": \"npm cache clean && npm run rimraf -- node_modules doc coverage dist desktop _temp compiled\",\n\"clean:aot\": \"npm run rimraf -- compiled\",\n",
+        "message": "shore(ci): temporary remove desktop build"
+      },
+      {
+        "diff": "\"broccoli-manifest\": \"0.0.7\",\n\"broccoli-merge-trees\": \"^1.1.1\",\n\"broccoli-serviceworker\": \"0.1.4\",\n- \"broccoli-stylelint\": \"billybonks/broccoli-stylelint\",\n\"ember-ajax\": \"2.5.2\",\n\"ember-browserify\": \"^1.1.12\",\n\"ember-cli\": \"2.10.0\",\n\"ember-cli-release\": \"^0.2.9\",\n\"ember-cli-sass\": \"^5.2.1\",\n\"ember-cli-sri\": \"^2.1.0\",\n- \"ember-cli-stylelint\": \"0.9.0\",\n+ \"ember-cli-stylelint\": \"0.9.1\",\n\"ember-cli-template-lint\": \"0.4.12\",\n\"ember-cli-test-loader\": \"^1.1.0\",\n\"ember-cli-uglify\": \"^1.2.0\",\n\"pouchdb-core\": \"^6.0.7\",\n\"pouchdb-list\": \"^1.1.0\",\n\"request\": \"2.79.0\",\n- \"stylelint\": \"7.6.0\",\n+ \"stylelint\": \"~7.7.1\",\n\"stylelint-config-concentric\": \"1.0.6\",\n\"stylelint-declaration-use-variable\": \"1.6.0\",\n\"stylelint-scss\": \"1.3.4\",\n",
+        "message": "Updated to ember-cli-stylelint 0.9.1"
+      }
+    ]
+  },
+  {
+    "file": "README.md",
+    "commits": [
+      {
+        "diff": "@@ -321,11 +321,6 @@ The following are some things that will make AoT compile fail.\nPlease see the [CONTRIBUTING](https://github.com/JonnyBGod/angular2-webpack-advance-starter/blob/master/.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](https://github.com/JonnyBGod/angular2-webpack-advance-starter/blob/master/.github/CODE_OF_CONDUCT.md) files for guidelines.\n-## Known Bugs\n-\n-- [ ] ELECTRON: css absolute paths\n-- [ ] npm run docs (upstream) (https://github.com/TypeStrong/typedoc/issues/234)\n-\n___\n# License\n",
+        "message": "chore(docs): update known bugs"
+      },
+      {
+        "diff": "* Magento 2.1+\n* [Magento 2 System Requirements](http://devdocs.magento.com/guides/v2.0/install-gde/system-requirements.html)\n* SSL is installed on your site and active on Checkout and Login pages\n-* A verified Amazon Pay account\n+* A verified Amazon Payments merchant account\n## Installation and Configuration\n",
+        "message": "re-brand language fixes"
+      },
+      {
+        "diff": "Please follow the instructions in the [User Guide] (https://amzn.github.io/amazon-payments-magento-2-plugin)\n## Release Notes\n-### v1.1.0 Rebrand, final module name, public launch\n+### v1.1.0 Rebrand\n#### Enhancements:\n* This release does not add any new features\n#### Bug Fixes:\n* This release does not fix any bugs\n-### v1.0.10 Automated key exchange, new streamlined registration, condensed UI\n+### v1.0.10 Small fixes\n#### Enhancements:\n* #31 Scope parameter propagated to the Amazon Pay widgets\n* #11 Integrate checkout agreement blocks in the checkout\n#### Bug Fixes:\n- * #27 Fix capture error when auth is greater than 7 days old\n+ * #27 Get the payment method from the order instead of the quote\n* #33 Fix the checkout layout block to be in line with Magento 2.1\n-\n",
+        "message": "Short Readme update"
+      },
+      {
+        "diff": "## Installation and Configuration\nPlease follow the instructions in the [User Guide](https://amzn.github.io/amazon-payments-magento-2-plugin)\n-\n-## Release Notes\n-### v1.1.1 stability\n-#### Enhancements:\n- * Display the module version in the admin html\n- * Support for Modernizr 3.x\n- * Added extended support for japanese names\n- * Removed disturbing message for charge on order\n- * Configuration option to supply the store name added\n-\n-#### Bug Fixes:\n- * Order handling for free orders corrected\n- * Fixed incompatibility on CompleteOrder\n- * Displayed URLs did not take the store-view configured domain into account\n- * Removed unneeded CSS and layout\n- * jQuery storage API not always present\n-\n-### v1.1.0 Rebrand\n-#### Enhancements:\n- * This release does not add any new features\n-\n-#### Bug Fixes:\n- * This release does not fix any bugs\n-\n-### v1.0.10 Small fixes\n-#### Enhancements:\n- * #31 Scope parameter propagated to the Amazon Pay widgets\n- * #11 Integrate checkout agreement blocks in the checkout\n-\n-#### Bug Fixes:\n- * #27 Get the payment method from the order instead of the quote\n- * #33 Fix the checkout layout block to be in line with Magento 2.1\n",
+        "message": "Update README.md\n\nremoving release notes as they were no longer kept up-to-date."
+      }
+    ]
+  },
+  {
+    "file": "composer.json",
+    "commits": [
+      {
+        "diff": "{\n- \"name\": \"amazon/module-login-and-pay\",\n+ \"name\": \"amzn/amazon-payments-magento-2-plugin\",\n\"description\": \"Official Magento2 Plugin to integrate with Amazon Payments\",\n\"type\": \"magento2-module\",\n\"version\": \"1.0.9\",\n",
+        "message": "Update composer.json\n\nUpdating package name."
+      },
+      {
+        "diff": "{\n- \"name\": \"beargroup/amazon-pay-and-login-magento-2-module\",\n+ \"name\": \"amzn/amazon-pay-and-login-magento-2-module\",\n\"description\": \"Official Magento2 Plugin to integrate with Amazon Pay and Login with Amazon\",\n\"type\": \"magento2-module\",\n\"version\": \"1.1.1\",\n",
+        "message": "revert test name change"
+      },
+      {
+        "diff": "\"Apache-2.0\"\n],\n\"require\": {\n- \"php\": \"~5.6.0|7.0.2|~7.0.6\",\n- \"magento/framework\": \"^100.1.0\",\n- \"magento/module-sales\": \"^100.1.0\",\n- \"magento/module-checkout\": \"^100.1.0\",\n- \"magento/module-payment\": \"^100.1.0\",\n- \"magento/module-eav\": \"^100.1.0\",\n- \"magento/module-developer\": \"^100.1.0\",\n- \"magento/module-config\": \"^100.1.0\",\n- \"magento/module-backend\": \"^100.1.0\",\n- \"magento/module-quote\": \"^100.1.0\",\n- \"magento/module-customer\": \"^100.1.0\",\n- \"magento/module-store\": \"^100.1.0\",\n+ \"magento/framework\": \"^100.1.0|^101.0.0\",\n+ \"magento/module-sales\": \"^100.1.0|^101.0.0\",\n+ \"magento/module-checkout\": \"^100.1.0|^100.2.0\",\n+ \"magento/module-payment\": \"^100.1.0|^100.2.0\",\n+ \"magento/module-eav\": \"^100.1.0|^101.0.0\",\n+ \"magento/module-developer\": \"^100.1.0|^100.2.0\",\n+ \"magento/module-config\": \"^100.1.0|^101.0.0\",\n+ \"magento/module-backend\": \"^100.1.0|100.2.0\",\n+ \"magento/module-quote\": \"^100.1.0|^101.0.0\",\n+ \"magento/module-customer\": \"^100.1.0|^101.0.0\",\n+ \"magento/module-store\": \"^100.1.0|^100.2.0\",\n\"amzn/amazon-pay-sdk-php\": \"^3.1.0\"\n},\n\"require-dev\": {\n",
+        "message": "Composer.json compatibility with Magento 2.2"
+      },
+      {
+        "diff": "\"ciaranmcnulty/behat-stepthroughextension\": \"dev-master\"\n},\n\"require\": {\n- \"php\": \"php: ~7.1.3||~7.2.0\",\n+ \"php\": \"~7.1.3||~7.2.0\",\n\"magento/framework\": \"*\",\n\"magento/module-sales\": \"*\",\n\"magento/module-checkout\": \"*\",\n",
+        "message": "Correcting typo in composer"
+      }
+    ]
+  },
+  {
+    "file": "docs/installation.rst",
+    "commits": [
+      {
+        "diff": "@@ -8,7 +8,7 @@ Pre-installation steps\nInstallation process\n--------------------\nCurrently, the installation via the web setup wizard is the preferred way of installing the extension.\n-Please follow this guide_ to learm how this works.\n+Please follow this guide_ to learn how this works.\n.. _guide: http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html\n",
+        "message": "Update installation.rst\n\nFix typo."
+      },
+      {
+        "diff": "@@ -5,20 +5,24 @@ Pre-installation steps\n----------------------\n* Create a backup of your shop before proceeding to install.\n-Installation process\n---------------------\n-The installation via the web setup wizard is the preferred way of installing the extension.\n-Please follow this guide_ to learm how this works.\n+Web Setup Wizard / Magento Marketplace Install Method (Preferred)\n+-----------------------------------------------------------------\n+The installation via the Web Setup Wizard is the preferred method of installation.\n+Please follow the `Magento Marketplace User Guide`_ to learn how this works.\n-.. _guide: http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html\n+Our extension can be found here: https://marketplace.magento.com/amzn-amazon-pay-and-login-magento-2-module.html\n+.. _`Magento Marketplace User Guide`: http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html\n+\n+Manual Composer Install Method\n+------------------------------\nIn case you are not able or willing to use the web installation, you can install the extension using composer.\n-- Sign in to your server via ssh\n-- cd into you Magento instalation directory\n+- Sign in to your server via SSH\n+- `cd` into you Magento installation directory\n- Install the extension via composer: `composer require amzn/amazon-payments-magento-2-plugin:^1.1.0`\n- Enable the extension: `php bin/magento module:enable Amazon_Core Amazon_Login Amazon_Payment`\n- Upgrade the Magento instalation: `php bin/magento setup:upgrade`\n-- Follow any advice the upgrade routine will give\n+- Follow any advice the upgrade routine provides\n- Deploy static content: `php bin/magento setup:static-content:deploy xx_XX yy_YY` where xx_XX, yy_YY, ... are the locales you are aiming to support\n- Check permissions on directories and files and set them correctly if needed\n",
+        "message": "Modify Installation Section of docs"
+      },
+      {
+        "diff": "@@ -20,11 +20,13 @@ In case you are not able or willing to use the web installation, you can install\n* Sign in to your server via SSH\n* `cd` into you Magento installation directory\n-* Install the extension via composer: `composer require amzn/amazon-payments-magento-2-plugin:^1.1.1`\n+* Install the extension via composer: `composer require amzn/amazon-payments-magento-2-plugin:^1.1.3`\n* Enable the extension: `php bin/magento module:enable Amazon_Core Amazon_Login Amazon_Payment`\n* Upgrade the Magento installation: `php bin/magento setup:upgrade`\n* Follow any advice the upgrade routine provides\n+.. note:: `composer require amzn/amazon-payments-magento-2-plugin:^1.1.3` will always instal the most current, non-breaking, Amazon Pay extension for you, when you run an update. To fix it to a specifix version, please remove the `^`\n+\nIn production mode, you will also have to compile the code and the dependency injection (DI) configuration and deploy static content\n* Compile code and DI: `php bin/magento setup:di:compile`\n@@ -34,4 +36,10 @@ In production mode, you will also have to compile the code and the dependency in\n.. note::\nPlease also have a look at the official Magento documentation for command line configuration: http://devdocs.magento.com/guides/v2.1/config-guide/cli/config-cli-subcommands.html\n+Un-install Method\n+--------------------------\n+If there is a need ti disable the module, you can either disable Amazon Pay and Login with Amazon in the extension settings. This will temove all customer facing parts.\n+\n+To completely disable the module, please run `php bin/magento module:disable Amazon_Core Amazon_Login Amazon_Payment`\n+To completely uninstall the module using composer, please run `composer remove amzn/amazon-payments-magento-2-plugin`\n\\ No newline at end of file\n",
+        "message": "updated documentaton for installation and un-install"
+      },
+      {
+        "diff": "@@ -32,7 +32,7 @@ installed as follows::\n$ cd HistomicsTK\n# pip install git+https://github.com/cdeepakroy/ctk-cli\n$ pip install --no-cache-dir -r requirements.txt\n- $ pip install .\n+ $ pip install -e .\nIf you build libtiff or openjpeg locally, ensure that the appropriate pip files\nhave also been installed locally so that they use the correct libraries::\n",
+        "message": "Update doc to install HistomicsTK in dev mode (#368)\n\nHistomicsTK should be installed in development mode `pip install -e .` or `python setup.py develop` for the Cython files compiled via scikit-build to be placed inplace in the source directory.\r\n\r\nUpdated the documentation for installing histomicstk as a python toolkit to reflect this."
+      }
+    ]
+  },
+  {
+    "file": "docs/conf.py",
+    "commits": [
+      {
+        "diff": "@@ -60,9 +60,9 @@ author = u'Amazon.com Inc or its affiliates'\n# built documents.\n#\n# The short X.Y version.\n-version = u'1.1.0'\n+version = u'1.1.1'\n# The full version, including alpha/beta/rc tags.\n-release = u'1.1.0'\n+release = u'1.1.1'\n# The language for content autogenerated by Sphinx. Refer to documentation\n# for a list of supported languages.\n",
+        "message": "Update conf.py\n\nupdating version number"
+      },
+      {
+        "diff": "@@ -115,7 +115,15 @@ exclude_patterns = [\n# Ignore markdown source for notebooks; myst-nb builds from the ipynb\n# These are kept in sync using the jupytext pre-commit hook.\n'notebooks/*.md',\n- 'jax-101/*.md',\n+ # TODO: revert to jax-101/*.md once 08-pjit has a notebook\n+ 'jax-101/01-jax-basics.md',\n+ 'jax-101/02-jitting.md',\n+ 'jax-101/03-vectorization.md',\n+ 'jax-101/04-advanced-autodiff.md',\n+ 'jax-101/05-random-numbers.md',\n+ 'jax-101/05.1-pytrees.md',\n+ 'jax-101/06-parallelism.md',\n+ 'jax-101/07-state.md',\n'autodidax.md',\n# Attempt to fix RTD build failure\n'transformations.md',\n",
+        "message": "not exclude 08-pjit.md"
+      },
+      {
+        "diff": "@@ -53,7 +53,7 @@ extensions = ['sphinx.ext.autodoc',\nautodoc_mock_imports = ['matplotlib', 'matplotlib.pyplot',\n'nimfa',\n- 'openslide', 'pandas',\n+ 'openslide', 'pandas', 'large_image',\n'scipy',\n'scipy.ndimage.morphology','scipy.ndimage.filters',\n'scipy.ndimage.measurements',\n",
+        "message": "Add a mock for large_image in docs/conf.py (#238)"
+      },
+      {
+        "diff": "@@ -61,7 +61,8 @@ autodoc_mock_imports = ['matplotlib', 'matplotlib.pyplot',\n'skimage', 'skimage.feature', 'skimage.measure',\n'skimage.segmentation', 'skimage.morphology',\n'skimage.draw',\n- 'sklearn.cluster', 'sklearn.neighbors.kde']\n+ 'sklearn.cluster', 'sklearn.neighbors.kde',\n+ 'histomicstk.segmentation.label.trace_boundaries_cython']\n# Add any paths that contain templates here, relative to this directory.\ntemplates_path = ['_templates']\n",
+        "message": "Add mock for trace_boundaries_cython in docs/conf.py (#241)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "author": "667",
+    "commits": [
+      {
+        "diff": "\"hamljs\": \"^0.6.2\",\n\"handlebars\": \"^4.7.3\",\n\"javascript-stringify\": \"^2.0.1\",\n- \"liquidjs\": \"^6.4.3\",\n+ \"liquidjs\": \"^9.11.7\",\n\"lodash\": \"^4.17.15\",\n\"luxon\": \"^1.22.2\",\n\"markdown-it\": \"^8.4.2\",\n",
+        "message": "chore: upgrade 2x performant LiquidJS v9"
+      },
+      {
+        "diff": "\"js-yaml\": \"^3.13.1\",\n\"jsdoc\": \"3.6.3\",\n\"lint-staged\": \"^10.0.9\",\n+ \"liquidjs\": \"^9.11.9\",\n\"markdown-it-emoji\": \"^1.4.0\",\n\"node-sass\": \"^4.13.1\",\n\"nyc\": \"^15.0.0\",\n\"hamljs\": \"^0.6.2\",\n\"handlebars\": \"^4.7.3\",\n\"javascript-stringify\": \"^2.0.1\",\n- \"liquidjs\": \"^9.11.7\",\n\"lodash\": \"^4.17.15\",\n\"luxon\": \"^1.22.2\",\n\"markdown-it\": \"^8.4.2\",\n",
+        "message": "chore: upgrade liquidjs to the latest"
+      },
+      {
+        "diff": "\"husky\": \"^7.0.4\",\n\"js-yaml\": \"^4.1.0\",\n\"lint-staged\": \"^11.2.6\",\n+ \"liquidjs\": \"^9.28.4\",\n\"markdown-it-emoji\": \"^2.0.0\",\n\"nyc\": \"^15.1.0\",\n\"prettier\": \"^2.4.1\",\n\"hamljs\": \"^0.6.2\",\n\"handlebars\": \"^4.7.7\",\n\"is-glob\": \"^4.0.3\",\n- \"liquidjs\": \"9.25.1\",\n\"lodash\": \"^4.17.21\",\n\"luxon\": \"^2.0.2\",\n\"markdown-it\": \"^12.2.0\",\n",
+        "message": "feat: upgrade liquidjs to ^9.28.4, fixes #1995"
+      },
+      {
+        "diff": "\"husky\": \"^7.0.4\",\n\"js-yaml\": \"^4.1.0\",\n\"lint-staged\": \"^11.2.6\",\n- \"liquidjs\": \"^9.28.4\",\n+ \"liquidjs\": \"^9.28.5\",\n\"markdown-it-emoji\": \"^2.0.0\",\n\"nyc\": \"^15.1.0\",\n\"prettier\": \"^2.4.1\",\n",
+        "message": "fix: upgrade liquidjs to 9.28.5 to allow './' recognized as relative on Windows, #1995"
+      }
+    ]
+  },
+  {
+    "author": "669",
+    "commits": [
+      {
+        "diff": "@@ -154,8 +154,19 @@ class EleventyConfig {\npluginCallback(this);\n}\n+ /**\n+ * Adds a path to a file or directory to the list of pass-through copies\n+ * which are copied as-is to the output.\n+ *\n+ * @param {String} fileOrDir The path to the file or directory that should\n+ * be copied.\n+ * @returns {any} a reference to the `EleventyConfig` object.\n+ * @memberof EleventyConfig\n+ */\naddPassthroughCopy(fileOrDir) {\nthis.passthroughCopies[fileOrDir] = true;\n+\n+ return this;\n}\nsetTemplateFormats(templateFormats) {\n",
+        "message": "Make EleventyConfig.addPassthroughCopy chainable"
+      },
+      {
+        "diff": "@@ -414,7 +414,7 @@ test(\"Layout from template-data-file that has a permalink (fileslug) Issue #121\"\n});\ntest(\"Local template data file import (without a global data json)\", async t => {\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/stubs/\");\nawait dataObj.cacheData();\nlet tmpl = new Template(\n@@ -435,7 +435,7 @@ test(\"Local template data file import (without a global data json)\", async t =>\n});\ntest(\"Local template data file import (two subdirectories deep)\", async t => {\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/stubs/\");\nawait dataObj.cacheData();\nlet tmpl = new Template(\n@@ -459,7 +459,7 @@ test(\"Local template data file import (two subdirectories deep)\", async t => {\n});\ntest(\"Posts inherits local JSON, layouts\", async t => {\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/stubs/\");\nawait dataObj.cacheData();\nlet tmpl = new Template(\n@@ -494,7 +494,7 @@ test(\"Posts inherits local JSON, layouts\", async t => {\n});\ntest(\"Template and folder name are the same, make sure data imports work ok\", async t => {\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/stubs/\");\nawait dataObj.cacheData();\nlet tmpl = new Template(\n@@ -1194,7 +1194,7 @@ test(\"Data Cascade (Deep merge)\", async t => {\nlet newConfig = Object.assign({}, config);\nnewConfig.dataDeepMerge = true;\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/\");\ndataObj._setConfig(newConfig);\nawait dataObj.cacheData();\n@@ -1226,7 +1226,7 @@ test(\"Data Cascade (Deep merge)\", async t => {\n});\ntest(\"Data Cascade (Shallow merge)\", async t => {\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/\");\nawait dataObj.cacheData();\nlet tmpl = new Template(\n@@ -1255,7 +1255,7 @@ test(\"Data Cascade Tag Merge (Deep merge)\", async t => {\nlet newConfig = Object.assign({}, config);\nnewConfig.dataDeepMerge = true;\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/stubs/\");\ndataObj._setConfig(newConfig);\nawait dataObj.cacheData();\n@@ -1272,7 +1272,7 @@ test(\"Data Cascade Tag Merge (Deep merge)\", async t => {\n});\ntest(\"Data Cascade Tag Merge (Shallow merge)\", async t => {\n- let dataObj = new TemplateData();\n+ let dataObj = new TemplateData(\"./test/stubs/\");\nawait dataObj.cacheData();\nlet tmpl = new Template(\n",
+        "message": "Fix: Tests invoking illegal constructor TemplateData()"
+      },
+      {
+        "diff": "@@ -18,7 +18,10 @@ class EleventyFiles {\nthis.inputDir = TemplatePath.getDir(this.input);\nthis.outputDir = outputDir;\n- this.includesDir = this.inputDir + \"/\" + this.config.dir.includes;\n+ this.includesDir = TemplatePath.normalize(\n+ this.inputDir,\n+ this.config.dir.includes\n+ );\nthis.passthroughAll = !!passthroughAll;\nthis.formats = formats;\n",
+        "message": "Join paths together correctly with TemplatePath utility"
+      },
+      {
+        "diff": "@@ -11,7 +11,7 @@ module.exports = {\nremoveDir: function(str) {\nreturn TemplatePath.stripPathFromDir(\nstr,\n- TemplatePath.normalize(__dirname, \"..\")\n+ TemplatePath.join(__dirname, \"..\")\n);\n}\n}\n",
+        "message": "Separate normalize and join methods"
+      }
+    ]
+  },
+  {
+    "author": "670",
+    "commits": [
+      {
+        "diff": "@@ -22,12 +22,6 @@ class TemplatePassthrough {\n}\nasync write() {\n- // debug(\n- // `${this.path} has no TemplateEngine engine and will copy to ${\n- // this.outputDir\n- // }`\n- // );\n-\nif (!this.isDryRun) {\ndebug(\"Copying %o\", this.path);\n",
+        "message": "Add support for passthrough with directory remapping"
+      },
+      {
+        "diff": "@@ -3,18 +3,22 @@ const TemplatePath = require(\"./TemplatePath\");\nconst debug = require(\"debug\")(\"Eleventy:TemplatePassthrough\");\nclass TemplatePassthrough {\n- constructor(inputPath, outputDir, inputDir) {\n- this.path = inputPath;\n+ constructor(path, outputDir, inputDir) {\n+ this.inputPath = path.inputPath;\n+ this.outputPath = path.outputPath;\nthis.outputDir = outputDir;\nthis.inputDir = inputDir;\nthis.isDryRun = false;\n}\ngetOutputPath() {\n- return TemplatePath.join(\n- this.outputDir,\n- TemplatePath.stripLeadingSubPath(this.path, this.inputDir)\n- );\n+ const { inputDir, outputDir, inputPath, outputPath } = this;\n+ // assuming if paths are the same an outputPath was not set and we will resolve manually?\n+ const path =\n+ outputPath === inputPath\n+ ? TemplatePath.stripLeadingSubPath(outputPath, inputDir)\n+ : outputPath;\n+ return TemplatePath.join(outputDir, path);\n}\nsetDryRun(isDryRun) {\n@@ -23,9 +27,9 @@ class TemplatePassthrough {\nasync write() {\nif (!this.isDryRun) {\n- debug(\"Copying %o\", this.path);\n+ debug(\"Copying %o\", this.inputPath);\n- return copy(this.path, this.getOutputPath(), {\n+ return copy(this.inputPath, this.getOutputPath(), {\noverwrite: true,\ndot: true,\njunk: false,\n",
+        "message": "Resolve issues with outpur paths"
+      },
+      {
+        "diff": "@@ -38,7 +38,10 @@ class TemplatePassthrough {\nasync getFiles(glob) {\ndebug(\"Searching for: %o\", glob);\n- return TemplatePath.addLeadingDotSlashArray(await fastglob.async(glob));\n+ const files = await TemplatePath.addLeadingDotSlashArray(\n+ await fastglob.async(glob)\n+ );\n+ return files;\n}\nasync write() {\n@@ -51,7 +54,6 @@ class TemplatePassthrough {\nif (!this.isDryRun) {\ndebug(\"Copying %o\", this.inputPath);\n-\nconst isDirectory = TemplatePath.isDirectorySync(this.inputPath);\nconst isFile = fs.existsSync(this.inputPath);\n// If directory or file, recursive copy\n@@ -60,10 +62,14 @@ class TemplatePassthrough {\n}\n// If not directory or file, attempt to get globs\n+\nconst files = await this.getFiles(this.inputPath);\n- return files.forEach(inputFile => {\n- return copy(inputFile, this.getGlobOutputPath(inputFile), copyOptions);\n- });\n+\n+ const promises = files.map(inputFile =>\n+ copy(inputFile, this.getGlobOutputPath(inputFile), copyOptions)\n+ );\n+\n+ return Promise.all(promises);\n}\n}\n}\n",
+        "message": "Fix async write issue"
+      },
+      {
+        "diff": "@@ -583,14 +583,20 @@ test.skip(\"JavaScript with alias\", async t => {\nevf.init();\nlet files = await fastglob.async(evf.getFileGlobs());\n- t.deepEqual(evf.getRawFiles(), [\n+ t.deepEqual(\n+ evf.getRawFiles().sort(),\n+ [\n\"./test/stubs/writeTestJS/**/*.11ty.js\",\n\"./test/stubs/writeTestJS/**/*.js\"\n- ]);\n- t.deepEqual(files, [\n+ ].sort()\n+ );\n+ t.deepEqual(\n+ files.sort(),\n+ [\n\"./test/stubs/writeTestJS/sample.js\",\n\"./test/stubs/writeTestJS/test.11ty.js\"\n- ]);\n+ ].sort()\n+ );\nlet tw = new TemplateWriter(\n\"./test/stubs/writeTestJS\",\n",
+        "message": "Sort when comparing arrays because some versions of node... I don't really know why but order is different and it matters"
+      }
+    ]
+  },
+  {
+    "author": "672",
+    "commits": [
+      {
+        "diff": "@@ -42,7 +42,7 @@ class Eleventy {\nthis.isVerbose = process.env.DEBUG ? false : !this.config.quietMode;\n/**\n- * @member {Boolean} - Was verbose mode overrode manually?\n+ * @member {Boolean} - Was verbose mode overridden manually?\n* @default false\n*/\nthis.isVerboseOverride = false;\n",
+        "message": "Correct verb conjugation mistake in comment\n\nThe past participle of the verb \"override\" is \"overridden\", not \"overrode\".\r\nWe say: \"foo overrode bar\", but \"bar was overriden by foo\".\r\nhttps://www.theconjugator.com/english/verb/to+override.html"
+      },
+      {
+        "diff": "@@ -40,9 +40,8 @@ class Ejs extends TemplateEngine {\nasync compile(str, inputPath) {\nlet options = this.getEjsOptions();\n- if (!inputPath || inputPath === \"ejs\" || inputPath === \"md\") {\n- // do nothing\n- } else {\n+\n+ if (inputPath && inputPath ==! \"ejs\" && inputPath ==! \"md\") {\noptions.filename = inputPath;\n}\n",
+        "message": "Inverse boolean logic to avoid empty statement\n\nI'm not sure what's the benefit of having a condition leading to an empty statement ?\r\nYou may have a good reason that I have missed though."
+      },
+      {
+        "diff": "@@ -383,6 +383,14 @@ test(\"Get ignores (both .eleventyignore and .gitignore exists, but .gitignore ha\n});\n/* End .eleventyignore and .gitignore combos */\n+test(\"getTemplateData caching\", t => {\n+ let evf = new EleventyFiles(\"test/stubs\", \"test/stubs/_site\", []);\n+ evf.init();\n+ let templateDataFirstCall = evf.getTemplateData();\n+ let templateDataSecondCall = evf.getTemplateData();\n+ t.is(templateDataFirstCall, templateDataSecondCall);\n+});\n+\ntest(\"getDataDir\", t => {\nlet evf = new EleventyFiles(\".\", \"_site\", []);\nevf.init();\n",
+        "message": "Add getTemplateData caching test"
+      },
+      {
+        "diff": "@@ -277,7 +277,7 @@ class Eleventy {\nthis.eleventyFiles.init();\nthis.templateData = new TemplateData(this.inputDir);\n- this.eleventyFiles.setTemplateData(this.templateData);\n+ this.eleventyFiles.templateData = this.templateData;\nthis.writer = new TemplateWriter(\nthis.input,\n",
+        "message": "Use getter/setter for getTemplateData"
+      }
+    ]
+  },
+  {
+    "author": "676",
+    "commits": [
+      {
+        "diff": "@@ -18,6 +18,8 @@ class Benchmark {\nthis.beforeTimers = [];\n}\n+ // TODO(slightlyoff):\n+ // disable all of these hrtime requests when not benchmarking\nbefore() {\nthis.timesCalled++;\nthis.beforeTimers.push(this.getNewTimestamp());\n",
+        "message": "Initial, cleaned-up cut of performance tuning patches.\n\nBenchmark results:\n\n  https://gist.github.com/slightlyoff/4a2c2709c8a4ef80ef074010b0be6a65\n\nAPI compatible; all tests pass."
+      },
+      {
+        "diff": "const pkg = require(\"../package.json\");\nconst TemplatePath = require(\"./TemplatePath\");\nconst TemplateData = require(\"./TemplateData\");\n+const TemplateContent = require(\"./TemplateContent\");\nconst TemplateWriter = require(\"./TemplateWriter\");\nconst EleventyExtensionMap = require(\"./EleventyExtensionMap\");\nconst EleventyErrorHandler = require(\"./EleventyErrorHandler\");\n@@ -443,6 +444,7 @@ Arguments:\n* @param {String} changedFilePath - File that triggered a re-run (added or modified)\n*/\nasync _addFileToWatchQueue(changedFilePath) {\n+ TemplateContent.deleteCached(changedFilePath);\nthis.watchManager.addToPendingQueue(changedFilePath);\n}\n",
+        "message": "Invalidate input caches in watch mode."
+      },
+      {
+        "diff": "@@ -5,25 +5,17 @@ const EleventyErrorUtil = require(\"../EleventyErrorUtil\");\nconst EleventyBaseError = require(\"../EleventyBaseError\");\n/*\n- * HACKITYHACKHACKHACKHACK\n+ * This IFFE applies a monkey-patch to Nunjucks internals to cache\n+ * compiled templates and re-use them where possible. It's relatively\n+ * pessimistic (conservative) about cache clearing to ensure correctness.\n*/\n-let inc = ((i) => {\n- return () => {\n- return i++;\n- };\n-})(0);\n-let pathMap = new Map();\n-\n-let clearCache = (reason = \"\") => {\n- if (pathMap.size > 0) {\n- pathMap.clear();\n- }\n-};\n+(function () {\n+ let templateCache = new Map();\nlet clearAndWrap = (name, obj = NunjucksLib.Environment) => {\nlet orig = obj.prototype[name];\nobj.prototype[name] = function (...args) {\n- clearCache(name);\n+ templateCache.clear();\nreturn orig.call(this, ...args);\n};\n};\n@@ -31,50 +23,42 @@ let clearAndWrap = (name, obj = NunjucksLib.Environment) => {\nclearAndWrap(\"addExtension\");\nclearAndWrap(\"removeExtension\");\n-(function () {\n- // IFFE to prevent temp var leakage\nlet getKey = (obj) => {\n- let eids = obj.env.extensionsList.reduce((v, c) => {\n- return c.__id ? v + \" : \" + c.__id : v;\n- }, \"\");\n- let k =\n- `${obj.path || obj.tmplStr} :: ${obj.tmplStr.length} :: ` +\n- `${obj.env.asyncFilters.length} :: (${eids})`; /* +\n- (\n- (obj.env.extensionsList.length) ?\n- `${Object.keys(obj.env.extensions).join(\"|\")} :: (${eids})` :\n- \"\"\n- );\n- */\n- return k;\n+ return [\n+ obj.path || obj.tmplStr,\n+ obj.tmplStr.length,\n+ obj.env.asyncFilters.length,\n+ obj.env.extensionsList\n+ .map((e) => {\n+ return e.__id || \"\";\n+ })\n+ .join(\":\"),\n+ ].join(\" :: \");\n};\n- let tc = NunjucksLib.Template.prototype._compile;\n+\n+ let _compile = NunjucksLib.Template.prototype._compile;\nNunjucksLib.Template.prototype._compile = function (...args) {\n- // console.log(`NunjucksLib.Template.prototype._compile`);\n- if (!this.compiled && !this.tmplProps && pathMap.has(getKey(this))) {\n- let pathProps = pathMap.get(getKey(this));\n+ if (!this.compiled && !this.tmplProps && templateCache.has(getKey(this))) {\n+ let pathProps = templateCache.get(getKey(this));\nthis.blocks = pathProps.blocks;\nthis.rootRenderFunc = pathProps.rootRenderFunc;\nthis.compiled = true;\n} else {\n- tc.call(this, ...args);\n- pathMap.set(getKey(this), {\n+ _compile.call(this, ...args);\n+ templateCache.set(getKey(this), {\nblocks: this.blocks,\nrootRenderFunc: this.rootRenderFunc,\n});\n}\n};\n- let ae = NunjucksLib.Environment.prototype.addExtension;\n- NunjucksLib.Environment.prototype.addExtension = function (...args) {\n- let e = args[1];\n- e.__id = inc();\n- return ae.call(this, ...args);\n+ let extensionIdCounter = 0;\n+ let addExtension = NunjucksLib.Environment.prototype.addExtension;\n+ NunjucksLib.Environment.prototype.addExtension = function (name, ext) {\n+ ext.__id = extensionIdCounter++;\n+ return addExtension.call(this, name, ext);\n};\n})();\n-/*\n- * END HACKITYHACKHACKHACKHACK\n- */\nclass EleventyShortcodeError extends EleventyBaseError {}\n@@ -137,7 +121,7 @@ class Nunjucks extends TemplateEngine {\n);\n}\n- clearCache(\"addTag\");\n+ // clearCache();\nthis.njkEnv.addExtension(name, tagObj);\n}\n@@ -238,8 +222,7 @@ class Nunjucks extends TemplateEngine {\n};\n}\n- // Invalidate the caches.\n- clearCache(\"addShortcode\");\n+ // clearCache();\nthis.njkEnv.addExtension(shortcodeName, new ShortcodeFunction());\n}\n@@ -310,7 +293,7 @@ class Nunjucks extends TemplateEngine {\n};\n}\n- clearCache(\"addPairedShortcode\");\n+ // clearCache();\nthis.njkEnv.addExtension(shortcodeName, new PairedShortcodeFunction());\n}\n",
+        "message": "Cleanup variables and scopes per review comments."
+      },
+      {
+        "diff": "@@ -12,17 +12,6 @@ const EleventyBaseError = require(\"../EleventyBaseError\");\n(function () {\nlet templateCache = new Map();\n- let clearAndWrap = (name, obj = NunjucksLib.Environment) => {\n- let orig = obj.prototype[name];\n- obj.prototype[name] = function (...args) {\n- templateCache.clear();\n- return orig.call(this, ...args);\n- };\n- };\n-\n- clearAndWrap(\"addExtension\");\n- clearAndWrap(\"removeExtension\");\n-\nlet getKey = (obj) => {\nreturn [\nobj.path || obj.tmplStr,\n@@ -58,7 +47,9 @@ const EleventyBaseError = require(\"../EleventyBaseError\");\nname,\next\n) {\n+ if (!(\"__id\" in ext)) {\next.__id = extensionIdCounter++;\n+ }\nreturn addExtension.call(this, name, ext);\n};\n})();\n",
+        "message": "Less aggressive cache invalidation for a small speedup."
+      }
+    ]
+  }
+]

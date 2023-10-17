@@ -1,0 +1,165 @@
+Input:
+Given the following output from git diff, write a commit message:
+
+"hamljs": "^0.6.2",
+"handlebars": "^4.7.3",
+"javascript-stringify": "^2.0.1",
+- "liquidjs": "^6.4.3",
++ "liquidjs": "^9.11.7",
+"lodash": "^4.17.15",
+"luxon": "^1.22.2",
+"markdown-it": "^8.4.2",
+
+
+Consider the following examples as template:
+
+chore: upgrade liquidjs to the latest
+feat: upgrade liquidjs to ^9.28.4, fixes #1995
+fix: upgrade liquidjs to 9.28.5 to allow './' recognized as relative on Windows, #1995
+
+Output:
+chore: upgrade liquidjs to ^9.11.7
+
+Original:
+chore: upgrade 2x performant LiquidJS v9
+
+-------------------------------------------
+
+Input:
+Given the following output from git diff, write a commit message:
+
+@@ -154,8 +154,19 @@ class EleventyConfig {
+pluginCallback(this);
+}
++ /**
++ * Adds a path to a file or directory to the list of pass-through copies
++ * which are copied as-is to the output.
++ *
++ * @param {String} fileOrDir The path to the file or directory that should
++ * be copied.
++ * @returns {any} a reference to the `EleventyConfig` object.
++ * @memberof EleventyConfig
++ */
+addPassthroughCopy(fileOrDir) {
+this.passthroughCopies[fileOrDir] = true;
++
++ return this;
+}
+setTemplateFormats(templateFormats) {
+
+
+Consider the following examples as template:
+
+Fix: Tests invoking illegal constructor TemplateData()
+Join paths together correctly with TemplatePath utility
+Separate normalize and join methods
+
+Output:
+feat: Add method to copy files or directories as-is to the output
+
+Add a new method `addPassthroughCopy()` to the `EleventyConfig` class that allows adding a path to a file or directory. The files or directories added will be copied as-is to the output. This method takes a parameter `fileOrDir` indicating the path to the file or directory that should be copied. It returns a reference to the `EleventyConfig` object.
+
+Resolves: Issue #1234
+
+Original:
+Make EleventyConfig.addPassthroughCopy chainable
+
+-------------------------------------------
+
+Input:
+Given the following output from git diff, write a commit message:
+
+@@ -22,12 +22,6 @@ class TemplatePassthrough {
+}
+async write() {
+- // debug(
+- // `${this.path} has no TemplateEngine engine and will copy to ${
+- // this.outputDir
+- // }`
+- // );
+-
+if (!this.isDryRun) {
+debug("Copying %o", this.path);
+
+
+Consider the following examples as template:
+
+Resolve issues with outpur paths
+Fix async write issue
+Sort when comparing arrays because some versions of node... I don't really know why but order is different and it matters
+
+Output:
+Refactor async write function and remove commented debug lines
+
+Original:
+Add support for passthrough with directory remapping
+
+-------------------------------------------
+
+Input:
+Given the following output from git diff, write a commit message:
+
+@@ -42,7 +42,7 @@ class Eleventy {
+this.isVerbose = process.env.DEBUG ? false : !this.config.quietMode;
+/**
+- * @member {Boolean} - Was verbose mode overrode manually?
++ * @member {Boolean} - Was verbose mode overridden manually?
+* @default false
+*/
+this.isVerboseOverride = false;
+
+
+Consider the following examples as template:
+
+Inverse boolean logic to avoid empty statement
+
+I'm not sure what's the benefit of having a condition leading to an empty statement ?
+You may have a good reason that I have missed though.
+Add getTemplateData caching test
+Use getter/setter for getTemplateData
+
+Output:
+Fix typo in comment about verbose mode override
+
+Original:
+Correct verb conjugation mistake in comment
+
+The past participle of the verb "override" is "overridden", not "overrode".
+We say: "foo overrode bar", but "bar was overriden by foo".
+https://www.theconjugator.com/english/verb/to+override.html
+
+-------------------------------------------
+
+Input:
+Given the following output from git diff, write a commit message:
+
+@@ -18,6 +18,8 @@ class Benchmark {
+this.beforeTimers = [];
+}
++ // TODO(slightlyoff):
++ // disable all of these hrtime requests when not benchmarking
+before() {
+this.timesCalled++;
+this.beforeTimers.push(this.getNewTimestamp());
+
+
+Consider the following examples as template:
+
+Invalidate input caches in watch mode.
+Cleanup variables and scopes per review comments.
+Less aggressive cache invalidation for a small speedup.
+
+Output:
+Disable hrtime requests when not benchmarking.
+
+Original:
+Initial, cleaned-up cut of performance tuning patches.
+
+Benchmark results:
+
+  https://gist.github.com/slightlyoff/4a2c2709c8a4ef80ef074010b0be6a65
+
+API compatible; all tests pass.
+
+-------------------------------------------
+

@@ -1,0 +1,27 @@
+[
+  {
+    "diff": "\"karma-remap-coverage\": \"^0.1.4\",\n\"karma-sourcemap-loader\": \"^0.3.7\",\n\"karma-webpack\": \"1.8.1\",\n- \"ng-router-loader\": \"^1.0.0\",\n+ \"ng-router-loader\": \"^1.0.1\",\n\"ngc-webpack\": \"^1.0.2\",\n\"ngrx-store-freeze\": \"0.1.6\",\n\"node-sass\": \"^4.1.1\",\n",
+    "message": "fix ng-router-loader",
+    "file": "package.json"
+  },
+  {
+    "diff": "@@ -321,11 +321,6 @@ The following are some things that will make AoT compile fail.\nPlease see the [CONTRIBUTING](https://github.com/JonnyBGod/angular2-webpack-advance-starter/blob/master/.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](https://github.com/JonnyBGod/angular2-webpack-advance-starter/blob/master/.github/CODE_OF_CONDUCT.md) files for guidelines.\n-## Known Bugs\n-\n-- [ ] ELECTRON: css absolute paths\n-- [ ] npm run docs (upstream) (https://github.com/TypeStrong/typedoc/issues/234)\n-\n___\n# License\n",
+    "message": "chore(docs): update known bugs",
+    "file": "README.md"
+  },
+  {
+    "diff": "{\n- \"name\": \"amazon/module-login-and-pay\",\n+ \"name\": \"amzn/amazon-payments-magento-2-plugin\",\n\"description\": \"Official Magento2 Plugin to integrate with Amazon Payments\",\n\"type\": \"magento2-module\",\n\"version\": \"1.0.9\",\n",
+    "message": "Update composer.json\n\nUpdating package name.",
+    "file": "composer.json"
+  },
+  {
+    "diff": "<label data-bind=\"attr: {'for': getCode()}\" class=\"label\"><span data-bind=\"text: getTitle()\"></span></label>\n</div>\n<div class=\"payment-method-content\">\n-\n+ <!-- ko foreach: getRegion('messages') -->\n+ <!-- ko template: getTemplate() --><!-- /ko -->\n+ <!--/ko-->\n<div class=\"amazon-widget-container\">\n<div id=\"walletWidgetDiv\" class=\"amazon-widget amazon-widget--payment\" data-bind=\"afterRender: initPaymentWidget\"></div>\n</div>\n- <div class=\"checkout-agreements-block\"></div>\n+ <div class=\"checkout-agreements-block\">\n+ <!-- ko foreach: $parent.getRegion('before-place-order') -->\n+ <!-- ko template: getTemplate() --><!-- /ko -->\n+ <!--/ko-->\n+ </div>\n<div class=\"actions-toolbar\">\n<div class=\"primary\">\n",
+    "message": "Add missing code to amazon payment template",
+    "file": "src/Payment/view/frontend/web/template/payment/amazon-payment-widget.html"
+  },
+  {
+    "diff": "@@ -25,5 +25,12 @@ var config = {\n//this is a fix for Magento 2.1 (ajax / validation fails on add to cart)\ncatalogAddToCart: 'Amazon_Payment/js/catalog-add-to-cart'\n}\n+ },\n+ config: {\n+ mixins: {\n+ 'Amazon_Payment/js/action/place-order': {\n+ 'Amazon_Payment/js/model/place-order-mixin': true\n+ }\n+ }\n}\n};\n",
+    "message": "Add mixin to Amazon to add agreement data to submission",
+    "file": "src/Payment/view/frontend/requirejs-config.js"
+  }
+]
