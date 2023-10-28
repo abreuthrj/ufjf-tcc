@@ -39,8 +39,6 @@ splitters.forEach((val, idx, arr) => {
   }
 });
 
-console.log(filenames, splitters);
-
 let currentSplitter = -1;
 let commits: Commit[] = [];
 let selecteds: Commit[] = [];
@@ -48,22 +46,11 @@ for (const idx of sorted) {
   if (currentSplitter === -1 || idx > splitters[currentSplitter]) {
     currentSplitter++;
 
-    console.log(currentSplitter, idx, splitters[currentSplitter]);
-
-    commits = Object.values(
-      JSON.parse(
-        fs
-          .readFileSync(`data/context-commits/${filenames[currentSplitter]}`)
-          .toString()
-      ) as Record<string, Commit>
-    );
-
-    console.log(
-      "Commits:",
-      commits.length,
-      "; Null:",
-      commits.filter((c) => !c).length
-    );
+    commits = JSON.parse(
+      fs
+        .readFileSync(`data/context-commits/${filenames[currentSplitter]}`)
+        .toString()
+    ) as Commit[];
   }
 
   let fixer = 0;
@@ -75,13 +62,13 @@ for (const idx of sorted) {
     selecteds.push(commits[idx - fixer]);
   } else {
     console.log(
-      "File:",
+      "Arquivo:",
       filenames[currentSplitter],
-      "Idx:",
+      "Index:",
       idx,
-      "; Fixed:",
+      "; Index ajustado:",
       idx - fixer,
-      "; Fixer:",
+      "; Valor de ajuste:",
       fixer,
       "; CurrentSplitter:",
       currentSplitter
@@ -91,7 +78,4 @@ for (const idx of sorted) {
 
 console.log("Selected length: ", selecteds.length);
 
-fs.writeFileSync(
-  "data/selected-commits.json",
-  JSON.stringify(selecteds, null, 2)
-);
+fs.writeFileSync("data/selected-commits.json", JSON.stringify(selecteds));

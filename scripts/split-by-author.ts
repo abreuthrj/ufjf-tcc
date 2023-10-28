@@ -9,27 +9,23 @@ for (const file of getFiles(OUTPUT_DIR)) {
   fs.rmSync(`${OUTPUT_DIR}/${file.name}`, { force: true, recursive: true });
 }
 
+console.log("Separando commits por autor");
 for (const file of getFiles()) {
   const buffer = fs.readFileSync(`${SAMPLES_DIR}/${file.name}`);
 
-  const content = Object.values(
-    JSON.parse(buffer.toString()) as Record<string, Commit>
-  );
+  const content = JSON.parse(buffer.toString()) as Commit[];
 
-  const authors: Record<number, string[]> = {};
+  const authors: Record<number, Commit[]> = {};
 
   content.forEach((commit) => {
     if (!authors[commit.author]) {
       authors[commit.author] = [];
     }
 
-    authors[commit.author].push(commit.hash);
+    authors[commit.author].push(commit);
   });
 
-  fs.writeFileSync(
-    `${OUTPUT_DIR}/${file.name}`,
-    JSON.stringify(authors, null, 2)
-  );
+  fs.writeFileSync(`${OUTPUT_DIR}/${file.name}`, JSON.stringify(authors));
 
-  console.log(`Processed file: ${file.name}`);
+  console.log(`Processado: ${file.name}`);
 }

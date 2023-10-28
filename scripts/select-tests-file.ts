@@ -27,7 +27,4 @@ result = result.map((commit) => ({
   })),
 }));
 
-fs.writeFileSync(
-  `${OUTPUT_DIR}/selection-file.json`,
-  JSON.stringify(result, null, 2)
-);
+fs.writeFileSync(`${OUTPUT_DIR}/selection-file.json`, JSON.stringify(result));

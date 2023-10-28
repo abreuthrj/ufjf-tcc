@@ -32,7 +32,4 @@ result = result.map((commit) => ({
   file: commit.mods[0].new_path,
 }));
 
-fs.writeFileSync(
-  `${OUTPUT_DIR}/selection.json`,
-  JSON.stringify(result, null, 2)
-);
+fs.writeFileSync(`${OUTPUT_DIR}/selection.json`, JSON.stringify(result));

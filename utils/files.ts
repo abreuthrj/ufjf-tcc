@@ -20,7 +20,7 @@ export const getDataSize = (dir?: string): number => {
 
   let sum = 0;
 
-  for (const file of getFiles()) {
+  for (const file of getFiles(dir)) {
     const data = JSON.parse(
       fs.readFileSync(`${dir}/${file.name}`).toString()
     ) as Commit[];
@@ -33,7 +33,7 @@ export const getDataSize = (dir?: string): number => {
 export const getFilesSize = (dir?: string): number[] => {
   dir = dir || SAMPLES_DIR;
 
-  return getFiles()
+  return getFiles(dir)
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((file) => {
       const data = JSON.parse(

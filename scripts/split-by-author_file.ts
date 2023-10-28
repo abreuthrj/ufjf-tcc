@@ -9,42 +9,27 @@ for (const file of getFiles(OUTPUT_DIR)) {
   fs.rmSync(`${OUTPUT_DIR}/${file.name}`, { force: true, recursive: true });
 }
 
+console.log("Separando commits por autor e arquivo");
 for (const file of getFiles()) {
   const buffer = fs.readFileSync(`${SAMPLES_DIR}/${file.name}`);
 
-  const content = Object.values(
-    JSON.parse(buffer.toString()) as Record<string, Commit>
-  );
+  const content = JSON.parse(buffer.toString()) as Commit[];
 
-  const author_file: Record<string, string[]> = {};
+  const author_file: Record<string, Commit[]> = {};
 
-  // Para cada modificação de cada commit, cria uma chave concatenando
-  // o autor e o nome do arquivo, e referencia o commit
-  // caso o arquivo tenha trocado de nome, referencia o commit em ambos nomes
   content.forEach((commit) => {
-    commit.mods.forEach((mod) => {
-      if (mod.old_path) {
-        const key = `${commit.author}:${mod.old_path}`;
-        if (!author_file[key]) {
-          author_file[key] = [];
-        }
-        author_file[key].push(commit.hash);
+    commit.mods.forEach((modification) => {
+      const key = `${modification.old_path}:${commit.author}`;
+
+      if (!author_file[key]) {
+        author_file[key] = [];
       }
 
-      if (mod.new_path && mod.old_path !== mod.new_path) {
-        const key = `${commit.author}:${mod.new_path}`;
-        if (!author_file[key]) {
-          author_file[key] = [];
-        }
-        author_file[key].push(commit.hash);
-      }
+      author_file[key].push(commit);
     });
   });
 
-  fs.writeFileSync(
-    `${OUTPUT_DIR}/${file.name}`,
-    JSON.stringify(author_file, null, 2)
-  );
+  fs.writeFileSync(`${OUTPUT_DIR}/${file.name}`, JSON.stringify(author_file));
 
-  console.log(`Processed file: ${file.name}`);
+  console.log(`Processado: ${file.name}`);
 }

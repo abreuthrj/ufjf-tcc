@@ -4,6 +4,8 @@
   "description": "This project aims to evaluate ChatGPT behavior in commit message generation under four different approaches.",
   "main": "index.js",
   "scripts": {
+    "preprocess": "ts-node preprocess.ts",
+    "split": "ts-node scripts/split-by-file.ts && ts-node scripts/split-by-author.ts && ts-node scripts/split-by-author_file.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Thiago Abreu",

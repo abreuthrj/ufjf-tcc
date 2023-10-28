@@ -5,44 +5,29 @@ import { SAMPLES_DIR } from "../constants";
 
 const OUTPUT_DIR = "data/split-by-file";
 
-// Limpa todos os arquivos da pasta
 for (const file of getFiles(OUTPUT_DIR)) {
   fs.rmSync(`${OUTPUT_DIR}/${file.name}`, { force: true, recursive: true });
 }
 
+console.log("Separando commits por arquivo");
 for (const file of getFiles()) {
   const buffer = fs.readFileSync(`${SAMPLES_DIR}/${file.name}`);
 
-  let content = Object.values(
-    JSON.parse(buffer.toString()) as Record<string, Commit>
-  );
+  let content = JSON.parse(buffer.toString()) as Commit[];
 
-  const data: Record<string, string[]> = {};
+  const data: Record<string, Commit[]> = {};
 
-  // Para cada modificação de cada commit, cria uma chave com o nome do arquivo
-  // referenciando o commit. Caso o arquivo tenha mudado de nome,
-  // referencia o commit para ambos nomes
   content.forEach((commit: Commit) => {
-    commit.mods.forEach((mod) => {
-      if (mod.old_path) {
-        const key = `${commit.repo}:${mod.old_path}`;
-        if (!data[key]) {
-          data[key] = [];
-        }
-        data[key].push(commit.hash);
-      }
+    const key = `${commit.repo}:${commit.mods[0].old_path}`;
 
-      if (mod.new_path && mod.new_path !== mod.old_path) {
-        const key = `${commit.repo}:${mod.new_path}`;
-        if (!data[key]) {
-          data[key] = [];
-        }
-        data[key].push(commit.hash);
-      }
-    });
+    if (!data[key]) {
+      data[key] = [];
+    }
+
+    data[key].push(commit);
   });
 
-  fs.writeFileSync(`${OUTPUT_DIR}/${file.name}`, JSON.stringify(data, null, 2));
+  fs.writeFileSync(`${OUTPUT_DIR}/${file.name}`, JSON.stringify(data));
 
-  console.log(`Processed file: ${file.name}`);
+  console.log(`Processado: ${file.name}`);
 }
