@@ -5,29 +5,30 @@ import { SAMPLES_DIR } from "../constants";
 
 const OUTPUT_DIR = "data/split-by-author";
 
+for (const file of getFiles(OUTPUT_DIR)) {
+  fs.rmSync(`${OUTPUT_DIR}/${file.name}`, { force: true, recursive: true });
+}
+
 for (const file of getFiles()) {
   const buffer = fs.readFileSync(`${SAMPLES_DIR}/${file.name}`);
 
-  const content = JSON.parse(buffer.toString()) as Commit[];
+  const content = Object.values(
+    JSON.parse(buffer.toString()) as Record<string, Commit>
+  );
 
-  const authors: Record<number, Commit[]> = {};
+  const authors: Record<number, string[]> = {};
 
   content.forEach((commit) => {
     if (!authors[commit.author]) {
       authors[commit.author] = [];
     }
 
-    authors[commit.author].push(commit);
+    authors[commit.author].push(commit.hash);
   });
-
-  const result = Object.entries(authors).map(([author, commits]) => ({
-    author,
-    commits,
-  }));
 
   fs.writeFileSync(
     `${OUTPUT_DIR}/${file.name}`,
-    JSON.stringify(result, null, 2)
+    JSON.stringify(authors, null, 2)
   );
 
   console.log(`Processed file: ${file.name}`);

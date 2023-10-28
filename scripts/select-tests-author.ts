@@ -13,13 +13,6 @@ const content = JSON.parse(buffer.toString()) as any[];
 
 let result: any[] = [];
 
-result.forEach((commitAuthor) => {
-  commitAuthor.commits = commitAuthor.commits.filter(
-    (commit: Commit) =>
-      commit.mods.length === 1 &&
-      commit.mods[0].old_path === commit.mods[0].new_path
-  );
-});
 result = content.filter(
   (commit) => commit.commits.length >= COMMITS_PER_AUTHOR
 );

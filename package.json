@@ -9,7 +9,8 @@
   "author": "Thiago Abreu",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.8.3"
+    "@types/node": "^20.8.3",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "axios": "^1.5.1",

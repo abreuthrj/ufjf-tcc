@@ -28,3 +28,5 @@ $original
 `;
 
 export const SAMPLES_DIR = "data/batches";
+
+export const BATCH_SIZE = 40000;

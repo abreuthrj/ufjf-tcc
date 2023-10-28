@@ -1,4 +1,8 @@
 .env
 node_modules/
-data/
-generated/
+randoms.txt
+data/batches/*
+data/split-by-author/*
+data/split-by-file/*
+data/split-by-author_file/*
+data/context-commits/*
