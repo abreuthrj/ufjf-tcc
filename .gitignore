@@ -1,4 +1,5 @@
 .env
 node_modules/
-data/*
-CoRec
+data/
+__pycache__/
+result/
