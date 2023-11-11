@@ -1,7 +1,7 @@
 import fs from "fs";
 import { Octokit } from "octokit";
 import dotenv from "dotenv";
-import { readJsonl } from "../utils/files";
+import { readStreamLine } from "../utils/files";
 
 dotenv.config();
 
@@ -19,9 +19,11 @@ const fileStream = fs.createWriteStream(
   `data/mcmd/${LANGUAGE}/enriched/${TYPE}.enriched`
 );
 
-readJsonl(
+readStreamLine(
   `data/mcmd/${LANGUAGE}/${TYPE}.jsonl`,
-  async (data) => {
+  async (line) => {
+    const data = JSON.parse(line);
+
     const [owner, ...splittedRepo] = data.repo.replace("\n", "").split("/");
 
     const repo = splittedRepo.join("/");

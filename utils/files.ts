@@ -1,5 +1,6 @@
-import fs from "fs";
+import fs, { read } from "fs";
 import { Commit } from "../types/commit";
+import readline from "readline";
 
 const SAMPLES_DIR = "data/batches";
 
@@ -76,5 +77,21 @@ export const readJsonl = <T = any>(
     }
 
     buffer = incompletes.splice(0).join("\n");
+  });
+};
+
+export const readStreamLine = (
+  path: string,
+  callback: (line: string, stream: readline.Interface) => Promise<void> | void,
+  callbackClose?: () => Promise<void> | void
+) => {
+  const readStream = readline.createInterface(fs.createReadStream(path));
+
+  readStream.on("close", () => {
+    callbackClose?.();
+  });
+
+  readStream.on("line", (line) => {
+    callback(line, readStream);
   });
 };

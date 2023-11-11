@@ -1,14 +1,12 @@
 ## Dataset
 
-A pasta `data/mcmd` contém a base de dados obtida em https://anonymous.4open.science/r/CommitMessageEmpirical. Basta baixar oo arquivo zip e extrair na pasta mcmd.
-A pasta `data/batches` contém os commits separados em arquivos menores.
-A pasta `data/context-commits` contém os commits enriquecidos com o histórico por arquivo/autor/arquivo_e_autor.
+A pasta `data/mcmd` contém a base de dados obtida em https://anonymous.4open.science/r/CommitMessageEmpirical. Basta baixar oo arquivo zip filtered_data e extrair na pasta mcmd.
 
 ## Scripts
 
 A pasta scripts contém os arquivos necessários para a reprodução do experimento.
 
-O script `preprocess-mcmd-data.ts` separa, para cada arquivo `.jsonl` contido na pasta `data/mcmd/$LANGUAGE`, os diffs e mensagens de commit em arquivos separados na pasta `data/mcmd/$LANGUAGE/processed`. Além disso o script separa em lotes de 5000 objetos os commits na pasta `data/mcmd/$LANGUAGE/splitted` para que se possa enriquecer arquivo por arquivo de maneira separada, de acordo com o limite de chamadas de API /hora do GitHub
+O script `preprocess-mcmd-data.ts` separa, para cada arquivo `.jsonl` contido na pasta `data/mcmd/$LANGUAGE`, os diffs e mensagens de commit em arquivos separados na pasta `data/mcmd/$LANGUAGE/processed`.
 
 O script `select-random-commits.ts` seleciona N (definido no script) indices aleatórios da base em `data/raw` e salva no arquivo `data/selected-commits.json`.
 
