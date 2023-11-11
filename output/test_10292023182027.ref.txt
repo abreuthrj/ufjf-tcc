@@ -1,0 +1,10 @@
+Add phase that copies frameworks into iOS infrustructure dir to be able to build ThaliTest app.
+Call redux-persist REHYDRATE ourselves in __DEV__ on Android\n\nFor some reason it doesn't fire when I refresh the app source in the Android emulator, so we need to manually fire it.
+console: Change updatedAt message
+Add waybar-memory(5)
+Fix lcov.info file path for NPM coverage script
+[INTERNAL] sap.ui.model.odata.v2.ODataModel: update tests for createEntry fullTarget calculation\n\nPS1: late comments from 4852724\n\nChange-Id: Ie09cafca97192ef93e0733c3f739c0d4db940ea5
+remove empty line after function docstring
+MTGNN coverage 97%->98%
+update text to reflect that mainnet is now using florence protocol
+[lib] Pass whole parentThreadInfo to CreatePendingThreadArgs\n\nSummary: This will be necessary in a following diff.\n\nTest Plan: Flow\n\nReviewers: palys-swm\n\nReviewed By: palys-swm\n\nSubscribers: Adrian, atul, karol-bisztyga\n\nDifferential Revision: https://phabricator.ashoat.com/D1995

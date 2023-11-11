@@ -1,9 +1,9 @@
 import fs from "fs";
 import { getFiles } from "../utils/files";
 import { SAMPLES_DIR } from "../constants";
-import { Commit } from "../commit.interface";
+import { Commit } from "../types/commit";
 
-const CONTEXT_SIZE = 5;
+const CONTEXT_SIZE = 3;
 const BATCH_SIZE = 5000;
 const OUTPUT_DIR = "data/context-commits";
 
@@ -14,6 +14,7 @@ export interface ShortCommit {
 
 export interface ContextCommit extends Partial<Commit> {
   file: string;
+  diff: string;
   authorCommits: ShortCommit[];
   fileCommits: ShortCommit[];
   authorFileCommits: ShortCommit[];

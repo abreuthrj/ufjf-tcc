@@ -1,5 +1,5 @@
 import fs from "fs";
-import { Commit } from "../commit.interface";
+import { Commit } from "../types/commit";
 
 const SAMPLES_DIR = "data/batches";
 
@@ -42,4 +42,39 @@ export const getFilesSize = (dir?: string): number[] => {
 
       return data.length;
     });
+};
+
+export const readJsonl = <T = any>(
+  path: string,
+  callback: (data: T) => Promise<void> | void,
+  callbackClose?: () => Promise<void> | void,
+  waitForCallback?: boolean
+) => {
+  const readStream = fs.createReadStream(path);
+
+  let buffer = "";
+
+  readStream.on("end", () => {
+    readStream.close();
+    callbackClose?.();
+  });
+
+  readStream.on("data", (chunk) => {
+    buffer += chunk;
+
+    const incompletes = [];
+    const pieces = buffer.split("\n");
+
+    for (const piece of pieces) {
+      try {
+        const obj = JSON.parse(piece);
+
+        callback(obj);
+      } catch (err) {
+        incompletes.push(piece);
+      }
+    }
+
+    buffer = incompletes.splice(0).join("\n");
+  });
 };

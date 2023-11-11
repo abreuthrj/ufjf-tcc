@@ -1,5 +1,5 @@
 import fs from "fs";
-import { Commit } from "../commit.interface";
+import { Commit } from "../types/commit";
 import { getFiles } from "../utils/files";
 import { SAMPLES_DIR } from "../constants";
 

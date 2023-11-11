@@ -1,0 +1,12 @@
+Copy framework build output to ThaliCoreFramework output directoryAdded dispatching of REHYDRATE action on componentDidMountUpdate 'updatedAt' label to 'Last updated at' for better clarityAdd 'waybar-memory.5.scd' to man_files listUpdated lcov subdir in config fileFix issue with deep path update in createEntry
+
+The commit message should highlight the issue that was fixed in the code. Based on the diff output, a suitable commit message could be "Fix issue with deep path update in createEntry".Refactor code to handle exceptions better and add logging
+
+The changes in this commit refactor the code to handle exceptions more accurately and add logging to improve error reporting. The commit also removes unnecessary comments and whitespace.
+
+Changes:
+- Refactored exception handling in verify_rules_file function
+- Added logging to improve error reporting
+- Removed unnecessary comments and whitespace
+
+Note: The commit message provided here focuses on the changes made to the code based on the given git diff output. It may not include all the relevant information about the commit, such as the purpose or context of the changes. It is important to provide a comprehensive commit message that covers all necessary details.Refactor code to use model2 with updated parametersUpdated list of currently supported protocols and their usage on respective networks.Refactor createPendingThread and createPendingSidebar functions and update parentThreadID parameter to parentThreadInfo

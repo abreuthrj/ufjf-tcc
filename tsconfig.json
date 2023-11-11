@@ -3,5 +3,5 @@
     "rootDir": ".",
     "esModuleInterop": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "CoRec", "data", "metrics"]
 }

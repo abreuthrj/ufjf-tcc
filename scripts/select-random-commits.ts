@@ -1,6 +1,6 @@
 import fs from "fs";
 import { getDataSize, getFiles, getFilesSize } from "../utils/files";
-import { Commit } from "../commit.interface";
+import { Commit } from "../types/commit";
 import { SAMPLES_DIR } from "../constants";
 
 console.log("Calculating total data size");

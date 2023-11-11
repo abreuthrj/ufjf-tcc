@@ -1,0 +1,25 @@
+[
+  {
+    "diff_id": 0,
+    "repo": "spring-projects/spring-boot\n",
+    "sha": "f8f4bd6c9531367b982f9ac35b0337782a8a6484\n",
+    "time": "2015-06-09T22:42:34Z\n",
+    "diff": "mmm a / spring - boot / src / main / java / org / springframework / boot / SpringApplication . java <nl> ppp b / spring - boot / src / main / java / org / springframework / boot / SpringApplication . java <nl> public void setBanner ( Banner banner ) { <nl> * Sets if the Spring banner should be displayed when the application runs . Defaults <nl> * to { @ code true } . <nl> * @ param showBanner if the banner should be shown <nl> - * @ see # printDefaultBanner ( ) <nl> * / <nl> public void setShowBanner ( boolean showBanner ) { <nl> this . showBanner = showBanner ; <nl>\n",
+    "msg": "Fix Javadoc warning\n",
+    "author": "pwebb@pivotal.io",
+    "files": [
+      {
+        "sha": "57e0ebdd09509867877c2271bd9997ef39eee903",
+        "filename": "spring-boot/src/main/java/org/springframework/boot/SpringApplication.java",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1,
+        "changes": 1,
+        "blob_url": "https://github.com/spring-projects/spring-boot/blob/f8f4bd6c9531367b982f9ac35b0337782a8a6484/spring-boot%2Fsrc%2Fmain%2Fjava%2Forg%2Fspringframework%2Fboot%2FSpringApplication.java",
+        "raw_url": "https://github.com/spring-projects/spring-boot/raw/f8f4bd6c9531367b982f9ac35b0337782a8a6484/spring-boot%2Fsrc%2Fmain%2Fjava%2Forg%2Fspringframework%2Fboot%2FSpringApplication.java",
+        "contents_url": "https://api.github.com/repos/spring-projects/spring-boot/contents/spring-boot%2Fsrc%2Fmain%2Fjava%2Forg%2Fspringframework%2Fboot%2FSpringApplication.java?ref=f8f4bd6c9531367b982f9ac35b0337782a8a6484",
+        "patch": "@@ -733,7 +733,6 @@ public void setBanner(Banner banner) {\n \t * Sets if the Spring banner should be displayed when the application runs. Defaults\n \t * to {@code true}.\n \t * @param showBanner if the banner should be shown\n-\t * @see #printDefaultBanner()\n \t */\n \tpublic void setShowBanner(boolean showBanner) {\n \t\tthis.showBanner = showBanner;"
+      }
+    ]
+  }
+]

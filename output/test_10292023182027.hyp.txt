@@ -1,0 +1,10 @@
+Copy framework output to thaliCoreFrameworkOutputDir in buildSwiftXCTest function
+Add rehydrate action on component mount
+Update translation for "updatedAt" to "Last updated at"
+Added waybar-memory.5.scd to man_files list
+Updated lcov report directory
+Updated SalesOrderLineItemSet for SalesOrderID='1' and ItemPosition='10'
+Fixed error handling and file path issues
+Added model2 to the test function
+Updated list of currently supported protocols for running a baking instance
+Refactor createPendingThread and createPendingSidebar functions\n\n- Refactor the createPendingThread function to use the parentThreadInfo object instead of the parentThreadID property.\n- Remove the parentThreadID parameter from the createPendingThread function.\n- Refactor the createPendingSidebar function to use the parentThreadInfo object instead of the parentThreadID property.\n- Remove the parentThreadID parameter from the createPendingSidebar function.

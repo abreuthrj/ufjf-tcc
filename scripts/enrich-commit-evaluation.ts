@@ -1,53 +1,30 @@
 import fs from "fs";
-
-const CONTEXT_SIZE = 3;
+import { ContextCommit } from "./enrich-context-commits";
+import { PROMPT_HISTORY, PROMPT_RAW } from "../constants";
 
 let commits = JSON.parse(
   fs.readFileSync(`data/selected-commits.json`).toString()
-) as any[];
+) as ContextCommit[];
 
-commits = commits.filter(
-  (c) =>
-    c.authorCommits.length === CONTEXT_SIZE &&
-    c.fileCommits.length === CONTEXT_SIZE &&
-    c.authorFileCommits.length === CONTEXT_SIZE
-);
-
-const [totAuthor, totFile, totAuthorFile] = [
-  commits.reduce(
-    (prev, commit) =>
-      prev +
-      commit.diff.split(" ").length +
-      commit.message.split(" ").length +
-      commit.authorCommits
-        .map((ac) => ac.message)
-        .join("\n")
-        .split(" ").length,
-    0
-  ),
-  commits.reduce(
-    (prev, commit) =>
-      prev +
-      commit.diff.split(" ").length +
-      commit.message.split(" ").length +
-      commit.fileCommits
-        .map((fc) => fc.message)
-        .join("\n")
-        .split(" ").length,
-    0
-  ),
-  commits.reduce(
-    (prev, commit) =>
-      prev +
-      commit.diff.split(" ").length +
-      commit.message.split(" ").length +
-      commit.authorFileCommits
-        .map((fc) => fc.message)
-        .join("\n")
-        .split(" ").length,
-    0
-  ),
-];
+let totRaw = 0,
+  totAuthor = 0,
+  totFile = 0,
+  totAuthorFile = 0;
+commits.forEach((c) => {
+  totRaw += PROMPT_RAW.replace("$diff", c.diff).length;
+  totAuthor += PROMPT_HISTORY.replace("$diff", c.diff).replace(
+    "$history",
+    c.authorCommits.map((c) => c.message).join("\n")
+  ).length;
+  totFile += PROMPT_HISTORY.replace("$diff", c.diff).replace(
+    "$history",
+    c.fileCommits.map((c) => c.message).join("\n")
+  ).length;
+  totAuthorFile += PROMPT_HISTORY.replace("$diff", c.diff).replace(
+    "$history",
+    c.authorFileCommits.map((c) => c.message).join("\n")
+  ).length;
+});
 
 console.log("Total of Commits:", commits.length);
 console.log("Total of Tokens for Author Context:", totAuthor);

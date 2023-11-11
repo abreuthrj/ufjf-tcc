@@ -1,0 +1,1 @@
+Add phase that copies frameworks into iOS infrustructure dir to be able to build ThaliTest app.
