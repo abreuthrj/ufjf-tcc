@@ -47,8 +47,7 @@ export const getFilesSize = (dir?: string): number[] => {
 export const readJsonl = <T = any>(
   path: string,
   callback: (data: T) => Promise<void> | void,
-  callbackClose?: () => Promise<void> | void,
-  waitForCallback?: boolean
+  callbackClose?: () => Promise<void> | void
 ) => {
   const readStream = fs.createReadStream(path);
 
@@ -68,7 +67,6 @@ export const readJsonl = <T = any>(
     for (const piece of pieces) {
       try {
         const obj = JSON.parse(piece);
-
         callback(obj);
       } catch (err) {
         incompletes.push(piece);
