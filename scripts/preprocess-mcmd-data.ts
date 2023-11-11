@@ -9,15 +9,15 @@ const LANGUAGE = process.env.LANGUAGE;
 const SETS = ["test", "train", "valid"];
 
 try {
-  fs.mkdirSync(`data/mcmd/${LANGUAGE}/processed`);
+  fs.mkdirSync(`CoRec/data/mcmd/${LANGUAGE}`, { recursive: true });
 } catch (err) {}
 
 for (const set of SETS) {
   const writeDiffStream = fs.createWriteStream(
-    `data/mcmd/${LANGUAGE}/processed/${set}.diff`
+    `CoRec/data/mcmd/${LANGUAGE}/${set}.diff`
   );
   const writeMsgStream = fs.createWriteStream(
-    `data/mcmd/${LANGUAGE}/processed/${set}.msg`
+    `CoRec/data/mcmd/${LANGUAGE}/${set}.msg`
   );
 
   readJsonl(
