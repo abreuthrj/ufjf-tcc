@@ -1,41 +1,48 @@
 import fs from "fs";
-import { Octokit, RequestError } from "octokit";
+import { Octokit } from "octokit";
 import dotenv from "dotenv";
-import { readJsonl } from "../utils/files";
+import { readStreamLine } from "../utils/files";
 
 dotenv.config();
 
-const LANGUAGE = process.env.LANGUAGE;
+const LANGUAGE = "javascript";
+const PATH = `data/preprocessed/${LANGUAGE}`;
+const OUTPUT = `data/enriched/${LANGUAGE}`;
 const TYPE = "test";
-const INTERVAL = 500;
+const INTERVAL = 15000;
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_API_KEY,
 });
 
 try {
-  fs.mkdirSync(`data/mcmd/${LANGUAGE}/enriched`);
+  fs.mkdirSync(OUTPUT, { recursive: true });
 } catch (err) {}
-const fileStream = fs.createWriteStream(
-  `data/mcmd/${LANGUAGE}/enriched/${TYPE}.enriched`,
-  { flags: "a" }
-);
+const fileStream = fs.createWriteStream(`${OUTPUT}/${TYPE}.enriched.jsonl`, {
+  flags: "a",
+});
 
 let processed = [];
 try {
-  processed = JSON.parse(
-    fs
-      .readFileSync(`data/mcmd/${LANGUAGE}/enriched/${TYPE}.processed`)
-      .toString()
-  );
+  processed = fs
+    .readFileSync(`${OUTPUT}/${TYPE}.processed.txt`)
+    .toString()
+    .split("\n");
 } catch (err) {}
 
 const queue = [];
 let finished = false;
 
-readJsonl(
-  `data/mcmd/${LANGUAGE}/${TYPE}.jsonl`,
-  async (data) => {
+const processedStream = fs.createWriteStream(
+  `${OUTPUT}/${TYPE}.processed.txt`,
+  { flags: "a" }
+);
+
+readStreamLine(
+  `${PATH}/${TYPE}.commits.jsonl`,
+  async (line) => {
+    const data = JSON.parse(line);
+
     if (!processed.includes(data.sha)) {
       queue.push(data);
     }
@@ -48,10 +55,6 @@ readJsonl(
 setInterval(async () => {
   if (!queue.length) {
     if (finished) {
-      fs.writeFileSync(
-        `data/mcmd/${LANGUAGE}/enriched/${TYPE}.processed`,
-        JSON.stringify(processed)
-      );
       process.exit(0);
     }
     return;
@@ -59,7 +62,7 @@ setInterval(async () => {
 
   const data = queue.shift();
 
-  const [owner, ...splittedRepo] = data.repo.replace("\n", "").split("/");
+  const [owner, ...splittedRepo] = data.repo.split("/");
 
   const repo = splittedRepo.join("/");
 
@@ -69,7 +72,7 @@ setInterval(async () => {
       {
         owner,
         repo,
-        commit_sha: data.sha.replace("\n", ""),
+        commit_sha: data.sha,
       }
     );
 
@@ -84,13 +87,8 @@ setInterval(async () => {
     }));
 
     fileStream.write(`${JSON.stringify(data)}\n`);
-
-    processed.push(data.sha);
+    processedStream.write(`${data.sha}\n`);
   } catch (err) {
-    fs.writeFileSync(
-      `data/mcmd/${LANGUAGE}/enriched/${TYPE}.processed`,
-      JSON.stringify(processed)
-    );
     process.exit(1);
   }
 }, INTERVAL);
