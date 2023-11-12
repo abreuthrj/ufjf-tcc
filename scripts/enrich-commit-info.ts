@@ -9,7 +9,7 @@ const LANGUAGE = "javascript";
 const PATH = `data/preprocessed/${LANGUAGE}`;
 const OUTPUT = `data/enriched/${LANGUAGE}`;
 const TYPE = "test";
-const INTERVAL = 15000;
+const INTERVAL = 1000;
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_API_KEY,
@@ -52,7 +52,7 @@ readStreamLine(
   }
 );
 
-setInterval(async () => {
+const consume = async () => {
   if (!queue.length) {
     if (finished) {
       process.exit(0);
@@ -88,7 +88,11 @@ setInterval(async () => {
 
     fileStream.write(`${JSON.stringify(data)}\n`);
     processedStream.write(`${data.sha}\n`);
+
+    setTimeout(consume, INTERVAL);
   } catch (err) {
     process.exit(1);
   }
-}, INTERVAL);
+};
+
+setTimeout(consume, 1000);
