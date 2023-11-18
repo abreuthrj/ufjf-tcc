@@ -9,10 +9,12 @@ const LANGUAGE = "javascript";
 const PATH = `data/preprocessed/${LANGUAGE}`;
 const OUTPUT = `data/enriched/${LANGUAGE}`;
 const TYPE = "test";
-const INTERVAL = 1000;
+const INTERVAL = 500;
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_API_KEY,
+  // auth: "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", // abreuthrj
+  // auth: "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", // coclub
+  auth: "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", // thiagoabreucs
 });
 
 try {
@@ -37,20 +39,9 @@ const processedStream = fs.createWriteStream(
   `${OUTPUT}/${TYPE}.processed.txt`,
   { flags: "a" }
 );
-
-readStreamLine(
-  `${PATH}/${TYPE}.commits.jsonl`,
-  async (line) => {
-    const data = JSON.parse(line);
-
-    if (!processed.includes(data.sha)) {
-      queue.push(data);
-    }
-  },
-  () => {
-    finished = true;
-  }
-);
+const errorStream = fs.createWriteStream(`${OUTPUT}/${TYPE}.error.txt`, {
+  flags: "a",
+});
 
 const consume = async () => {
   if (!queue.length) {
@@ -87,12 +78,31 @@ const consume = async () => {
     }));
 
     fileStream.write(`${JSON.stringify(data)}\n`);
-    processedStream.write(`${data.sha}\n`);
-
-    setTimeout(consume, INTERVAL);
   } catch (err) {
-    process.exit(1);
+    console.log("[ERROR]", data.sha);
+    errorStream.write(`${data.sha}\n`);
+  } finally {
+    processedStream.write(`${data.sha}\n`);
+    setTimeout(consume, INTERVAL);
   }
 };
 
-setTimeout(consume, 1000);
+let started = false;
+
+readStreamLine(
+  `${PATH}/${TYPE}.commits.jsonl`,
+  async (line) => {
+    const data = JSON.parse(line);
+
+    if (!processed.includes(data.sha)) {
+      queue.push(data);
+      if (!started) {
+        started = true;
+        consume();
+      }
+    }
+  },
+  () => {
+    finished = true;
+  }
+);

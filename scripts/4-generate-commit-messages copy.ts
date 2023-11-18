@@ -1,7 +1,7 @@
 import fs from "fs";
 import { gpt } from "../utils/gpt";
 import { PROMPT_RAW, TEST_FORMAT, PROMPT_HISTORY } from "../constants";
-import { ContextCommit } from "./enrich-context-commits";
+import { ContextCommit } from "./3-prepare-selected-commits";
 import { exec } from "child_process";
 import dotenv from "dotenv";
 import { addEOL, removeEOL } from "../utils/string";
