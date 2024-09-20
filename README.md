@@ -44,6 +44,10 @@ O script `select-random-commits.ts` seleciona 1K (valor N definido no script) de
 
 O script `enrich-context-commits.ts` percorre o arquivo `selected-commits.json` buscando o commit na base em `data/raw` pela chave `hash` e enriquecendo com informações do contexto.
 
+A Figura a seguir ilustra como funciona o enriquecimento de contexto dos commits:
+
+![Enriquecimento dos Commits](https://github.com/abreuthrj/ufjf-tcc/blob/master/docs/enrich-reduced-dataset.png?raw=true)
+
 ### Script de geração das mensagens de commit com o GPT
 
 O script `get-commit-messages.ts` envia para o gpt os primeiros N (definido no script) commits do arquivo de commits selecionados. O script gera três arquivos de saída:
