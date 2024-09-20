@@ -60,7 +60,7 @@ O script `get-commit-messages.ts` envia para o gpt os primeiros N (definido no s
 
 A pasta **metrics** contém o script `B-Norm.py` (obtido em https://anonymous.4open.science/r/CommitMessageEmpirical/metrics/B-Norm.py) para avaliar as mensagens geradas de acordo com o B-Norm.
 
-Para a execução do script é necessário invocar o script passando como parametro o arquivo de referência (que contém as mensagens de commit originais) e passando como `stdin` o arquivo de hipótese (contendo as mensagens gerada), em abos as mensagens devem estar separadas por quebra de linha. Exemplo:
+Para a execução do script é necessário invocar o script passando como parametro o arquivo de referência (que contém as mensagens de commit originais) e passando como `stdin` o arquivo de hipótese contendo as mensagens gerada, em ambos as mensagens devem estar separadas por quebra de linha. Exemplo:
 
 ```bash
 python3 metrics/B-Norm.py output/gpt/javascript/test.ref.msg.txt < output/gpt/javascript/test.msg.txt
@@ -70,7 +70,7 @@ python3 metrics/B-Norm.py output/gpt/javascript/test.ref.msg.txt < output/gpt/ja
 
 A pasta **metrics** contém o script `multi-bleu.perl` (obtido a partir do projeto CoRec) para avaliar as mensagens geradas de acordo com o B-Norm.
 
-Para a execução do script é necessário invocar o script passando como parametro o arquivo de referência (que contém as mensagens de commit originais) e passando como `stdin` o arquivo de hipótese (contendo as mensagens gerada), em abos as mensagens devem estar separadas por quebra de linha. Exemplo:
+Para a execução do script é necessário invocar o script passando como parametro o arquivo de referência (que contém as mensagens de commit originais) e passando como `stdin` o arquivo de hipótese contendo as mensagens gerada, em ambos as mensagens devem estar separadas por quebra de linha. Exemplo:
 
 ```bash
 perl metrics/multi-bleu.perl output/gpt/javascript/test.ref.msg.txt < output/gpt/javascript/test.msg.txt
