@@ -9,7 +9,7 @@ const LANGUAGE = "javascript";
 
 // const PATH = `data/filtered_data/${LANGUAGE}/sort_time_train80_valid10_test10`;
 const PATH = `data/mcmd/${LANGUAGE}/sort_time_train80_valid10_test10`;
-const OUTPUT = `data/preprocessed/${LANGUAGE}`;
+const OUTPUT = `data/0-preprocessed/${LANGUAGE}`;
 const SETS = ["test", "train", "valid"];
 const LIMITS = [5400, 100000, 5400];
 

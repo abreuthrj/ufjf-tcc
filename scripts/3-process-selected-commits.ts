@@ -8,9 +8,15 @@ const HISTORY_SIZE = 5;
 
 const commits = [];
 
-fs.mkdirSync(`data/processed/${LANGUAGE}`, { recursive: true });
+fs.mkdirSync(`data/3-processed/${LANGUAGE}`, { recursive: true });
 const writeStream = fs.createWriteStream(
-  `data/processed/${LANGUAGE}/${TYPE}.processed.jsonl`
+  `data/3-processed/${LANGUAGE}/${TYPE}.processed.jsonl`
+);
+const diffStream = fs.createWriteStream(
+  `data/3-processed/${LANGUAGE}/${TYPE}.diff.txt`
+);
+const msgStream = fs.createWriteStream(
+  `data/3-processed/${LANGUAGE}/${TYPE}.msg.txt`
 );
 
 let diffTokens = 0;
@@ -33,12 +39,14 @@ const prepare = (commit) => {
       return;
     }
 
+    // Adiciona commits de mesmo autor e repositório
     let hasAuthor = false;
     if (commit.author === search.author && commit.repo === search.repo) {
       hasAuthor = true;
       commit.authorHistory.push(search.msg);
     }
 
+    // Contabiliza a quantidade de arquivos modificados em comum
     let containingFiles = 0;
     for (const searchFile of search.files) {
       if (commit.files.includes(searchFile.filename)) {
@@ -46,8 +54,12 @@ const prepare = (commit) => {
       }
     }
 
+    // Adiciona commits com modificação em até 50% de arquivos em comum
     let hasFile = false;
-    if (commit.files.length * FILE_RATE <= containingFiles) {
+    if (
+      Math.max(commit.files.length, search.files.length) * FILE_RATE <=
+      containingFiles
+    ) {
       hasFile = true;
       commit.fileHistory.push(search.msg);
     }
@@ -67,6 +79,8 @@ const prepare = (commit) => {
   historyTokens += commit.authorFileHistory.join(" ").split(" ").length;
 
   writeStream.write(`${JSON.stringify(commit)}\n`);
+  diffStream.write(`${commit.diff}\n`);
+  msgStream.write(`${commit.msg}\n`);
 };
 
 const evaluateCost = () => {
@@ -76,13 +90,13 @@ const evaluateCost = () => {
 };
 
 readStreamLine(
-  `data/enriched/${LANGUAGE}/${TYPE}.enriched.jsonl`,
+  `data/1-enriched/${LANGUAGE}/${TYPE}.enriched.jsonl`,
   (line) => {
     commits.push(JSON.parse(line));
   },
   () => {
     readStreamLine(
-      `data/selected/${LANGUAGE}/${TYPE}.selected.jsonl`,
+      `data/2-selected/${LANGUAGE}/${TYPE}.selected.jsonl`,
       (line) => {
         prepare(JSON.parse(line));
       },

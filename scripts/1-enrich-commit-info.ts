@@ -1,20 +1,18 @@
+import dotenv from "dotenv";
 import fs from "fs";
 import { Octokit } from "octokit";
-import dotenv from "dotenv";
 import { readStreamLine } from "../utils/files";
 
 dotenv.config();
 
 const LANGUAGE = "javascript";
-const PATH = `data/preprocessed/${LANGUAGE}`;
-const OUTPUT = `data/enriched/${LANGUAGE}`;
+const PATH = `data/0-preprocessed/${LANGUAGE}`;
+const OUTPUT = `data/1-enriched/${LANGUAGE}`;
 const TYPE = "test";
 const INTERVAL = 500;
 
 const octokit = new Octokit({
-  // auth: "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", // abreuthrj
-  // auth: "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", // coclub
-  auth: "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", // thiagoabreucs
+  auth: process.env.GITHUB_ACCESS_KEY,
 });
 
 try {
@@ -26,19 +24,13 @@ const fileStream = fs.createWriteStream(`${OUTPUT}/${TYPE}.enriched.jsonl`, {
 
 let processed = [];
 try {
-  processed = fs
-    .readFileSync(`${OUTPUT}/${TYPE}.processed.txt`)
-    .toString()
-    .split("\n");
+  processed = fs.readFileSync(`${OUTPUT}/${TYPE}.processed.txt`).toString().split("\n");
 } catch (err) {}
 
 const queue = [];
 let finished = false;
 
-const processedStream = fs.createWriteStream(
-  `${OUTPUT}/${TYPE}.processed.txt`,
-  { flags: "a" }
-);
+const processedStream = fs.createWriteStream(`${OUTPUT}/${TYPE}.processed.txt`, { flags: "a" });
 const errorStream = fs.createWriteStream(`${OUTPUT}/${TYPE}.error.txt`, {
   flags: "a",
 });
@@ -58,14 +50,11 @@ const consume = async () => {
   const repo = splittedRepo.join("/");
 
   try {
-    const response = await octokit.request(
-      "GET /repos/{owner}/{repo}/commits/{commit_sha}",
-      {
-        owner,
-        repo,
-        commit_sha: data.sha,
-      }
-    );
+    const response = await octokit.request("GET /repos/{owner}/{repo}/commits/{commit_sha}", {
+      owner,
+      repo,
+      commit_sha: data.sha,
+    });
 
     console.log("[COMMIT] Found", response.data.sha);
 
