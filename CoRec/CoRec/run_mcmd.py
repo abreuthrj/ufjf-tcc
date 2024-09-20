@@ -24,7 +24,7 @@ def controller(opt):
         os.system(command)
 
     elif opt == "train":
-        command = f"python3 train.py -word_vec_size 512 \
+        command = "python3 train.py -word_vec_size 512 \
                                 -enc_layers 2 \
                                 -dec_layers 2 \
                                 -rnn_size 512 \
