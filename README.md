@@ -63,7 +63,7 @@ A pasta **metrics** contém o script `B-Norm.py` (obtido em https://anonymous.4o
 Para a execução do script é necessário invocar o script passando como parametro o arquivo de referência (que contém as mensagens de commit originais) e passando como `stdin` o arquivo de hipótese (contendo as mensagens gerada), em abos as mensagens devem estar separadas por quebra de linha. Exemplo:
 
 ```bash
-python3 metrics/B-Norm.py output/gpt/javascript/test.ref.txt < output/gpt/javascript/test.msg.txt
+python3 metrics/B-Norm.py output/gpt/javascript/test.ref.msg.txt < output/gpt/javascript/test.msg.txt
 ```
 
 ### BLEU
@@ -73,5 +73,5 @@ A pasta **metrics** contém o script `multi-bleu.perl` (obtido a partir do proje
 Para a execução do script é necessário invocar o script passando como parametro o arquivo de referência (que contém as mensagens de commit originais) e passando como `stdin` o arquivo de hipótese (contendo as mensagens gerada), em abos as mensagens devem estar separadas por quebra de linha. Exemplo:
 
 ```bash
-python3 metrics/B-Norm.py output/gpt/javascript/test.ref.txt < output/gpt/javascript/test.msg.txt
+perl metrics/multi-bleu.perl output/gpt/javascript/test.ref.msg.txt < output/gpt/javascript/test.msg.txt
 ```
