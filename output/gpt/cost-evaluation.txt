@@ -1,0 +1,6 @@
+Commits: 300
+Input Tokens: 1262718.6000000003
+Input Cost: $12.63
+Estimated Output Tokens: 36000
+Estimated Output Cost: $1.08
+Estimated Total Cost: $13.71

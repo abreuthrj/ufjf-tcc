@@ -1,0 +1,672 @@
+Ensure that the ` container ` div , on ` BaseViewer ` - instances , is absolutely positioned
+New revision for dev build
+chore ( starters ) : add gatsby - starter - basic - bootstrap ( )
+Add Taskord
+modernize reload
+chore ( showcase ) : Removing more sites from the showcase ( )
+Add Node . js version to Bug template ( )
+Delete Tutorials . md
+fixing the docker multi - stage build failures ( )
+Merge pull request from Gerrit0 / patch - 1
+Add suspendWhenDocumentHidden to the docs
+[ FIX ] Errors in LDAP avatar sync preventing login ( )
+highlight the “ no target on React Dashboard ” deal in docs
+Merge pull request from ajaxorg / drag - image
+Added processX and processY methods
+Merge pull request from cheznewa / cheznewa - patch - 1 - tv78
+[ FIX ] Cannot open admin when server uses ROOT_URL with subpath ( ) ( )
+docs : allowedFileTypes is a property of restrictions
+Merge pull request from themak1985 / patch - 60
+fix : Workaround config schema error on project initialization
+` SpineFile ` now uses a ` ! ` character to split the keys , instead of an underscore , preventing the plugin from incorrectly working out the keys for filenames with underscores in them . Fix
+Set ora discardStdin option to false ( )
+docs : Improve changelog
+use React . Children . count for counting children ( )
+test ( document ) : repro
+[ Autocomplete ] Reset input on blur for freeSolo mode too ( )
+Merge pull request from jgreywolf / 1058 - ClassDiagramScaling
+Docs : Quickstart update ( )
+Update CanvasRenderer . js
+examples : Fix checkout page ( )
+Remove Olelo
+Add Krisp - An AI - Powered noise canceling app . ( )
+Bump dayjs from 1 . 9 . 6 to 1 . 9 . 7 ( )
+Update asPath to mention basePath / locale stripping ( )
+Update se . m3u
+Revert " Publish build artefacts for pull requests "
+Update cartesianProduct . md
+fix browser error snapshots
+Update _sidebar . md
+[ docs ] Fix template title and description
+v3 . 20 . 3
+Merge pull request from h5bp / dependabot / npm_and_yarn / mocha - 8 . 1 . 3
+Fabric : Catching exceptions in UIManager : : completeRoot earlier , in C + +
+Add GEM Arabia
+Switch the badge in the README from Travis CI to GitHub Actions
+Automatically use Meteor jquery package with test - in - browser .
+fix : Export Duration type in duration plugin ( )
+` Tilemaps . Components . GetTileToWorldYFunction ` is a new function that returns the correct conversion function to use .
+chore ( release ) : 1 . 8 . 25 [ skip ci ]
+Merge pull request from 117028813 / patch - 2
+Add details to the Migration page
+chore ( www ) : convert swatch component to theme - ui ( )
+Make sure Handle is registered with the serializer ( )
+New revision for release candidate
+Update versionUpdates . md
+Update HSLToRGB . md
+Merge pull request from airbnb / lencioni - patch - 1
+Fixup , put beta after point release in CHANGELOG
+Removed unused authors input serializer
+Fix nav selected
+Testing if we can just pass off rendering directly .
+Add " LiveSession " to " Experience Monitoring "
+Update co . m3u
+Fixed regression tests
+Merge pull request from 30 - seconds / km - to - mi
+Fix " Commitment to Open Source " link in contributing . md ( )
+Minor code review
+ci : Do not pursue a resources cleanup after integration tests run
+Add HQ Euronews English mirror
+Resolve aliases modules ( )
+spellcheck
+fix ( CLI ) : Fix ambiguity of ' - v ' option
+Fix code style issues
+try https : / / master . tus . io / files / ( )
+v3 . 20 . 0
+fix : Fix AWS partition reference in APIGW CloudWatch role setup
+[ docs ] Fix links being opened when dismissing context menus ( )
+Added JSDocs for ` fromPhysicsEditor ` method and tidied things up a bit .
+Remove types - first from flowconfig template
+refactor ( Standalone ) : Improve upload confirmation logs
+Recognise Cmd key in Firefox
+chore : update opencollective sponsors
+Add Gancio
+Update yarn . lock
+Update isAlphaNumeric . md
+Remove duplicate
+Remove + on heading regex
+add slack channel link
+Emphasise / call out the note about ` . invisible ` and AT
+v3 . 29 . 1
+Updated Ghost - Admin to 3 . 7 . 0
+test : fix usage of assert . throws ( ) for older Node versions
+Update gr . m3u
+Bump rollup from 1 . 31 . 0 to 1 . 31 . 1 ( )
+fix key name for Nord theme
+Merge pull request from NPCtom / patch - 1
+fixing observing paint types in safari bug ( )
+Update Tokenizer . js
+Merge pull request from themak1985 / patch - 87
+Bump fs - extra from 9 . 0 . 0 to 9 . 0 . 1 ( )
+fix ( Templates ) : Fix java invoke - bridge build error handling ( )
+Back out " Use ConcreteStateTeller in RCTModalHostViewComponentView "
+prefix all paths in gatsby - config with __dirname ( )
+Merge pull request from Snuffleupagus / fieldObjects - annotation - undefined
+Merge pull request from VisualDevelopment / fix - undefined - typo
+Merge pull request from MMDF / patch - 1
+Add an event on hash change
+Format 7de49a8
+update Setup docs with more info and more ways to setup R + TS
+[ vbscript ] add missing MsgBoxResult constants
+Check package - lock consistency with package . json on CI ( )
+Add HQ Spacetoon
+Update Backers .
+aws - s3 - multipart : fix stuck upload with ` limit : 1 ` ( )
+Update CHANGELOG . md
+Make Firefox dev build auto - update
+Avoid crash when " - - max - old - space - size " is present ( )
+Merge pull request from Snuffleupagus / worker - rm - handler - scope
+only test latest node in gh action
+Added WriteFreely to CMS list
+style : fix lint
+Resolves
+Style browser dropdown to look more like a clickable button ( )
+Updatd Readme
+Don ' t add ` . amp ` to pathname ( )
+Update CHANGELOG - v3 . 50 . md
+changelog for 1 . 21 . 1
+[ SvgIcon ] Remove wrong role ( )
+Update usage . md
+Merge pull request from UziTech / patch - 10
+Update ir . m3u
+issue - 6168 : added leading zero to test runner counter in stats . … ( )
+Regression : Outgoing List ( )
+Bump prettier from 2 . 0 . 1 to 2 . 0 . 2 ( )
+Updated Ghost - Admin to v3 . 35 . 3
+Regression test for media event bubbling ( )
+packages / dalek package - lock . json
+docs ( sites ) : add flattenthecurve . co . nz to site showcase ( )
+V3 Docs : : Fix " unshirtAsync " typo ( )
+Use const in toolbar . js
+update platform
+Fix docs sass importing example .
+Fix https : / / ammantv . net / live
+added Al Masirah Mubacher to YM
+Bump @ types / sinon from 9 . 0 . 8 to 9 . 0 . 9 ( )
+Update information about Microsoft Edge version
+Fix warning on test ( )
+Support JetBrains Rider IDE as an editor ( )
+Merge pull request from samme / feature / camera - cull - opt
+fix ( generator ) : rename export hook to distRemoved
+Lazily create NativeTVNavigationEventEmitter
+[ docs ] Improve theme . breakpoints description ( )
+fix ( builder ) : ensure entry is in graph for HMR ( )
+Bump @ testing - library / dom from 7 . 22 . 1 to 7 . 22 . 2 ( )
+Formatting update
+` Tilemaps . Components . StaggeredWorldToTileXY ` is a new function that converts world coordinates to staggered tile coordinates .
+chore ( showcase ) : Add OnTravelDiary to list of sites ( )
+Remove premature optimization in FabricUIManager ; could be causing stopSurface inconsistencies
+[ test ] Migrate NativeSelectInput to react - testing - library ( )
+enable sc - connect ( )
+Logged resource path
+chore ( gatsby - google - tagmanager ) : Update README ( )
+Do not retain paper view inside legacy interop after it has been recycled
+Ensure that the " DocException " message handler , in the API , will always either error or warn ( depending on the build ) if a valid ` Error ` isn ' t found
+fix : Avoid looking up remote jquery instance if subject is not an element ( )
+Fixed shaders
+chore ( gatsby - transformer - asciidoc ) : use optional chaining ( )
+Test commit
+fix : code highlight
+[ docs ] Fix static asset loading with X
+docs : Port v1 . 83 . 2 CHANGELOG notes
+Add cross - env package ( )
+update package . json
+Update README . ko - KR . md ( )
+tools test list command added simple tests for tree and json mode
+Merge pull request from dlwnsgus777 / dev
+additional check
+docs ( migration ) : mention spinners slow down ( )
+Add a call to action to the new AST error ( )
+Spelling fix ( )
+Update us . m3u
+Adding [ super initialize ] to correct misreporting by MDCD
+chore ( release - drafter ) : wrap PR reference in square bracket ( )
+chore : fix typo in element test ( )
+Docs updated from code
+Update id . m3u
+Update us . m3u
+Bump @ types / sinon from 7 . 5 . 1 to 7 . 5 . 2 ( )
+Update main . yml
+Add ' point ' property for points
+Merge pull request from jaywcjlove / add - apache - directory - studio
+Docs : correct description for Arcade . Body # drag
+Fixed type : Issue gatsbyjs ( )
+Refactored to use local vars
+chore : fix svg logos
+README . md : change Tests badge to point to master ( )
+fix ( react ) : link types from the correct directory ( )
+chore ( deps ) : bump node - fetch
+Update excluding - props . md ( )
+Update de . m3u
+fix variable ( )
+fix Container pointToContainer function
+Update user - journey . md
+Merge pull request from tamuratak / worker_options
+Run benches on linux VMs
+Update cr . m3u
+Better method name . Reset once done .
+Correct ` standalone test ` environment variable ( )
+chore ( gatsby - recipes ) : update snapshot ( )
+Update lb
+Bump @ testing - library / dom from 7 . 0 . 4 to 7 . 1 . 0 ( )
+release 6 . 2 . 0 [ skip ci ]
+Fixed errant . only in tests
+Restored previous function
+Updated docs
+Merge pull request from rishikesh7355 / master
+Update docs / INDEX . md
+Remove mention of old Cypress Node version that we no longer use .
+Remove pointless test for parent node presence
+Fix regex breaking on IE in hyphenateStyleName ( )
+v5 . 2 . 0 - test . 8
+( blog ) Sustainable open source blog post ( )
+chore : Short circuit _doesRouteMatch ( ) . ( )
+build ( deps ) : bump prismjs from 1 . 15 . 0 to 1 . 21 . 0 ( )
+chore ( eslint - config ) : change eslint to better match strict ruleset ( )
+Bump $ BUNDLE_VERSION to 12 . 16 . 0 . 0 before rebuilding dev bundle .
+[ test ] Migrate TextField to react - testing - library ( )
+Fix : Broken line widget removal
+Fix handling of centerOfMass
+Update kp . m3u
+Move destroying of the scripting - instance from ` PDFViewerApplication . close ` and into its own helper method
+add mailto
+update submissions to site showcase ( )
+test ( transactions ) : use ` endSession ( ) ` in all transactions examples
+Update MatterPhysics . js
+Make Firefox dev build auto - update
+1 . 54 . 0 - dev
+[ Slider ] Make ` index ` public in the ValueLabel props ( )
+Add Navidrome demo site
+fix ( chore ) : remove processing and waiting queue ( )
+Bump @ fortawesome / react - fontawesome from 0 . 1 . 11 to 0 . 1 . 12 ( )
+fix ( gatsby ) : Improve ` gatsby ` TS types for ` sourceNodes ` ( )
+fix formatting
+Add ` . card - footer ` color ( )
+Add binarySearech
+Merge pull request from JoshuaKGoldberg / monarch - token - docs
+Bump @ types / node from 14 . 11 . 2 to 14 . 11 . 8 ( )
+v3 . 30 . 2
+Added Bonsaiilabs to Showcase Page ( )
+Handle callback returning promise . ( )
+Merge pull request from themak1985 / patch - 72
+Merge pull request from TechCodeDev / master
+Fixed types ( fix )
+feat : specify babel runtime version ( )
+Update ro . m3u
+Fix up android client and revert changes
+Update us . m3u
+Remove texture setters
+Update release - drafter . yml
+gitGraph : : hammer : dot and minus should be valid branch name
+eslint - config - standard @ 15 . 0 . 1
+Bump autoprefixer from 9 . 8 . 2 to 9 . 8 . 4 ( )
+[ docs ] Add spotless integrations ( maven and gradle ) ( )
+chore : use transloadit . com in tests
+Merge pull request from ykolbin / fix_tarball_module_name_v2
+chore : add ' pnpm - debug . log ' to ' _gitignore ' ( )
+chore ( starters ) : add gatsby - starter - capacitor ( )
+Mark RN method as requiring iOS 10 +
+[ FIX ] Allow Screensharing in BBB Iframe ( )
+v3 . 26 . 1
+Update cspell . json ( )
+Add . cjs ( common JS ) as a viable extension
+Adding pointData support to UserFlow
+chore : update opencollective sponsors
+Closes webpack dev server and exits process on " end " stdin ( )
+feat ( wxs ) : add getComputedStyle
+improve tests
+[ ubookmark ] + demo + source code
+Import translation work from https : / / crowdin . com / project / ublock
+NativeAnimatedModule : animations should still run if there isn ' t a Fabric commit for multiple frames
+Regression : Fix Thread List order ( )
+API Specifications Documentation Update ( )
+Fix Safari Script Test Count ( )
+refactor ( theme / view ) : faster assignIn ( )
+Fix crash when updating dialog props after the Activity has disappeared
+Wording : node instead of task
+do not call setHyphenationFrequency on AndroidSdk < 23 ( )
+Display the CSS tab in the interactive examples ( issue 11506 follow - up )
+[ FIX ] Keeps the agent in the room after accepting a new Omnichannel request ( )
+fix ( Config Schema ) : Recognize CF intrinsic functions in vpc config
+Merge pull request from iptv - org / bot - patch - 8b2faad
+Add SyncTube
+fix until example . Closes
+Fix color parsing
+Add cycleGenerator
+Fixed missing property
+[ docs ] Never transition preview if not shown ( )
+docs : update typescript support documentation
+Merge pull request from rehatkathuria / patch - 1
+docs : ad
+Bump prismjs from 1 . 17 . 1 to 1 . 18 . 0 ( )
+Bump $ BUNDLE_VERSION to 8 . 17 . 0 . 0 before rebuilding dev bundle .
+[ bugfix ] Support unusual historic timezone offsets ( fixes ) ( )
+fix : PRESERVE_WEBPACK_CACHE notice should actually show after 30 seconds ( )
+docs : add note to solve debugging build process on windows ( )
+Remove calls to AllocationLocationTracker for native memory
+Adding ERD diagram section to the docs
+Omnichannel Custom Fields router name was wrong . ( )
+fix ( AWS Lambda ) : Remove AWS issue workaround
+Merge pull request from iptv - org / bot - patch - 8ed6dcc
+Update CHANGELOG . md
+Updated changelog for 4 . 1 . 0 - beta . 0
+🧹 Fix typo ( )
+fix : Fix IsoWeek plugin typescript definition ( )
+Add mangle config for _forwarded
+Added fromPhysicsEditor method
+Fabric : Fixes in computing visible frame in ` RCTScrollViewComponentView `
+Update image optimization docs to include blog details ( )
+test ( model ) : repro
+Automate i18n sync ( )
+Fix flashing of no - src image when using next / image ( )
+Allow Rope to have post - pipeline
+Make Firefox dev build auto - update
+Fix default offline channel name when saving departments . ( )
+Bump @ emotion / core from 10 . 0 . 28 to 10 . 0 . 34 ( )
+Bump markdown - to - jsx from 6 . 10 . 3 to 6 . 11 . 0 ( )
+Update usage . md
+Revert " [ docs ] Avoid confusing nav items with disabled items ( ) "
+examples : Update with - electron . gitignore ( )
+fix docs : variable name
+RN : Cleanup ` ImageSource ` Flow Type
+Update br . m3u
+List dependency in package . json ( )
+Updated ownership verification email flow to use different From address
+thumbnail - generator : generate 80 % quality jpegs ( )
+Update my . m3u
+Disabling Static tests action due to issues with cypress
+Clean changelog_unreleased for patch - release
+Remove redundant source link .
+chore : update opencollective sponsors
+[ Radio ] Fix dot misalignment in Safari ( )
+Add transparent background color to versions switcher ( )
+show the edit button only when ! uploadInProgressOrComplete
+Fix compatibility issue with hosts files
+Migrate NativeModules from [ self bridge ] - > _bridge
+chore ( ci ) : exclude low severity vulnerabilities in github actions
+refactor ( test - processors - data ) : async / await & destructure ( )
+Utility for running API in each section . ( )
+[ FIX ] Popover component doesn ' t have scroll ( )
+docs : Improve contribution guideline
+Add Deploy to Gatsby Cloud subsection to main tutorial ( )
+Add Corteza
+Fix handling of no - longer - existing port condition
+Merge pull request from svick / patch - 1
+Add NPMPackageJson Docs ( )
+Fix linting
+Update example link text ( )
+Fix typo in n00b - syntaxReference . md
+chore ( showcase ) : add alexperronnet . io ( )
+Update 8 . 6 . 0_docs . md
+Bump @ types / prettier from 2 . 0 . 0 to 2 . 0 . 1 ( )
+Update version . md to include v5
+Create sixty - forks - fry . md
+remove local domain ( )
+force persistor persist again after persistStore bootstrap done ( )
+Merge pull request from emlimap / master
+chore : upgrade deps
+Bump eslint from 7 . 13 . 0 to 7 . 14 . 0
+Add challenge 3 of 100DaysOfGatsby ( )
+Fix lint error
+Update n00b - overview . md
+Add Aliman TV
+[ Autocomplete ] Fix correcy core peer - dependency
+Merge pull request from cheznewa / cheznewa - patch - 1 - setvna
+Add lighthouse tag ( )
+Fix failing the test when the linter finds an issue
+Add mallik . in to site showcase ( )
+Fabric : ` roundToPixel < > ( ) ` convenience functions
+Merge pull request from vltansky / getBreakpoint - type - fix
+Fix prettier linting
+fix ( gatsby - plugin - netlify ) : Add missing space in error message ( )
+* API : document getComputedSlideSize
+Fix broken localized string in some languages
+Removed testing step from Grunt release task
+Fixed broken Firefox Accounts Server link
+Gatsby Dev Proxy forwards ' complex ' HTTP calls like DELETE now ( )
+Export unitOfTime namespace
+Bump jsdom from 16 . 2 . 0 to 16 . 2 . 1 ( )
+Merge pull request from mrloop / em - routing - doc - update
+Make Firefox dev build auto - update
+Update next build docs to include the - - profile argument ( )
+Merge pull request from AloisMahdal / doc_df_table
+fix ( h5 ) : extract page ' s declarations
+14 . 3 . 3
+Update us . m3u
+Update bubbleSort . md
+Add HttPlaceholder to IDE / Tools
+Add removeAccents snippet
+Fix a typo in docs ( )
+Update unsorted . m3u
+Set the readonly attribute on the hidden textarea when the editor is read - only
+Added Attention Insight plugin to Analytics section
+Merge pull request from mooreds / patch - 1
+Merge pull request from preactjs / fix - ie11 - inputEvent
+docs : fix ` / docs / ` omission from path
+refactor ( AWS Lambda ) : Improve variables naming
+CHANGES : bower support dropped
+fix : Add type for pm2 . reload with optional options parameter
+Update CHANGELOG - v3 . 50 . md
+Update JavaPoet Module generator to follow new NativeModule schema
+Make Firefox dev build auto - update
+Updated docs
+docs : Add a note about ` gatsby - image ` fragments not working in GraphiQL ( )
+chore ( npmignore ) : remove History . md from published bundle
+docs ( source - from - drupal ) : Remove opinion text and reference Drupal module ( )
+fix : narrow the eslint peer dep version range , avoiding npm 7 error ( )
+Update supportsTouchEvents
+Add Al Yaum
+Add Palestine Satellite Channel mirror
+Added onDraw
+Merge pull request from preactjs / fix - authors
+[ Tab ] Remove font - size media - query ( )
+Renaming UserFlow methods
+Update n00b - gettingStarted . md
+Make Firefox dev build auto - update
+Add more tests for ` domain = ` and ` denyallow = ` options
+Update ir . m3u
+ruby symbols precedance before shorthand conditions
+Fix minor formatting issue in blush
+Bump notistack from 1 . 0 . 1 to 1 . 0 . 2 ( )
+DevTools : Remove ReactJS . org version check " cheat " ( )
+Feature / blog typo ( )
+refactor ( filter ) : Class syntax ( )
+Merge pull request from PascalRepond / master
+docs : Improve contribution notes
+new contributor added
+add armenian translation to the list
+Removed all of the uniform code
+Export return type for GetStaticPaths ( )
+Format react - native - codegen / DEFS . bzl ( )
+updating my twitter ! ( )
+Post - release version bump
+style ( router ) : clarify function name
+Pass the Game Object
+Update Kontent starter features ( )
+` CameraManager . getVisibleChildren ` is a new method that is called internally by the ` CameraManager . render ` method . It filters the DisplayList , so that Game Objects that pass the ` willRender ` test for the given Camera are added to a sub - list , which is then passed to the renderer . This avoids the renderer having to do any checks on the children , it just renders each one in turn .
+Bump material - ui - popup - state from 1 . 5 . 4 to 1 . 6 . 1 ( )
+Fix persist / revert tools not being shown after changes
+Commented out fixed version number
+label various generated rules with codegen_rule
+fix ( gatsby ) : Update types for WrapPageElement * Args ( )
+make tests pass ; for real
+Fix ` lint : changelog `
+Attempt to make make GitHub Actions work
+Remove deprecated MongoDB connection options . ( )
+docs ( fr ) : notes de version ( )
+[ IMPROVE ] Add ` file - title ` and ` file - desc ` as new filter tag options on message search ( )
+Forward extra properties from pug config to pug ( )
+update to chromium 85 . 0 . 4183 . 102
+Update cdn files version ( )
+add cut
+change size
+Enabled unkeyed focus tests
+Update CHANGELOG . md
+Merge pull request from adutton / patch - 1
+docs ( gatsby ) : Fix broken links ( )
+refactor ( index . d . ts ) : add MongooseQueryOptions type for ` mongooseOptions ( ) ` and ` _mongooseOptions `
+fix ( document ) : skip discriminator key when overwriting a document
+Update docs example on how to optimize JavaScript bundle
+Fix touch handling in bridged paper components
+Add annotations and thread safety checks in the initialization / teardown methods of ReactInstanceManager
+[ FIX ] translation for nl ( )
+chore ( gatsby ) : fold three loops into one ( )
+Bump tar - fs from 1 . 16 . 0 to 1 . 16 . 3
+Create pull_request_template . md
+Merge pull request from dandv / patch - 11
+Add my Gatsby - Blog - Starter - Dyuzz ( )
+1 . 53 . 0 - dev
+Fix drawing of marked text with only attributes
+Added Typographer plugin to Text Management section
+Moving all dependencies to the Model object
+[ examples ] Fix typo in gatsby readme ( )
+[ Skeleton ] Fix text border ( )
+Remove ` LoopbackPort . postMessage ` special - case for polyfilled ` TypedArray ` s
+fix ( gatsby - starter - blog ) : Load PrismJS theme CSS ( )
+Update stale for new label organization
+Merge pull request from ndsamuelson / patch - 1
+Updated Ghost - Admin to v3 . 24 . 0
+Make strEnd const
+typo
+fix : 0 - > ø ( )
+Moved testmode routes into their own folder
+src : nw2 : improve sad tab and disable hung renderer dialog
+chore ( starters ) : add gatsby - starter - woo ( )
+docs : writeFileSync path was missing api . resolve ( ) [ ci skip ]
+Added ` feature ` label to stalebot exemption list
+chore ( deps ) : update dependency postcss to ^ 8 . 1 . 7 ( )
+Removed a broken reference
+fix ( h5 ) : addStylesClient
+Override font size of select on desktop
+Merge pull request from ryota - murakami / ryota - murakami - patch - 1
+have eslint ignore file with intentional syntax error
+Add ' Select All ' and ' Redo ' features for text editing on macOS
+Update isIsogram . md
+ignore sourcemaps
+Simplified recommended script for testing .
+Merge pull request from cloutierlp / master
+Merge pull request from rohitpaulk / fix - router - docs
+node : update to v13 . 6 . 0
+docs : Update Google credentials . md documentation ( )
+docs : adjusting Sauce Labs name ( )
+3055 do not recreate cx and getValue functions during render of Select component
+Update create - react - app note for eslint - plugin - react - hooks ( )
+update mermaid - cli repo url
+Update AppVeyor Node versions ( )
+add node 14 to travis
+Fix Github deprecation warning
+` SpineFile ` will now check to see if another identical atlas in the load queue is already loading the texture it needs and will no longer get locked waiting for a file that will never complete . This allows multiple skeleton JSONs to use the same atlas data . Fix
+docs : Fix typo in Azure documentation ( )
+Update CHANGELOG . md
+Update deepFreeze . md
+Run lock check on CI ( )
+Update CHANGELOG . md
+Update Typescript to 4 . 1 . 2 - bump version
+src : Fix : make file dialog at the top of the window
+Fix sketchy null checks induced by new formatting in Prettier 2 . 0
+Update migrating - from - v1 - to - v2 . md ( )
+application . js : remove non - existent selector ( )
+1 . 50 . 0 - dev
+Remove useless Mounting diagnostic error
+update compilerVersion
+Fix crash in RCTLegacyViewManagerInteropCoordinator
+test : Unmock collect - updates when testing publish from - git
+fix ( modern ) : missing nomodule on legacy modules ( )
+Automatically cancel old workflow runs on PRs ( )
+Fixed ` this ` return types for ` Phaser . Input . Mouse . MouseManager `
+fix ( readme ) : gatsby - source - shopify : unify variable names ( )
+fix : property list values should show whitespace ( )
+Load . env files before running Telemetry ( )
+test : Exclude inaccessible elements by default in browser tests ( )
+Revert " Update API Specification doc " ( )
+pm2 @ 4 . 5 . 1
+report : fix ghost menu in print ( )
+[ FIX ] Migration 194 ( )
+Merge pull request from mike - shtil / master
+Fix i18n - routing Vercel deploy button URLs ( )
+fix ( Standalone ) : Ensure dashboard wrapper is bundled
+Prevent issues , in ` PDFDocument . fieldObjects ` , for invalid Annotations
+Discuss jquery changes in the Migration Steps for Meteor 1 . 8 . 3 .
+Fixed method for selecting env type ( )
+soft release date
+Update karma . conf . js ( )
+chore : Remove mistakenly registered dependency
+Merge pull request from Risto - Mcintosh / patch - 1
+fix ( docs ) : glossary / markdown - change bash to shell ( )
+Correct import comment in interfaces ( )
+Fix incorrect benchmark working directory ( )
+add step - by - step highlights to readme
+Merge pull request from mkabatek / fix / google - drive - providerName
+Expose new function
+Fix handling of nil event in legacy interop layer ' s eventInterceptor
+[ vbscript ] add missing keyword operators : " Eqv " , " Imp " and " Is "
+Update ie . m3u
+Add requireUncached
+src : nw2 : fix window moving left while calling resizeTo ( )
+refactor ( User Config ) : Show config save error only with SLS_DEBUG = *
+Fix : 2FA DDP method not getting code on API call that doesn ’ t requires 2FA ( )
+Update faq . pug
+style : Whitespace
+Fix wording ` src / packages / styled - components / base . js `
+Popup : fix event propagation to popup . _container ( )
+chore ( gatsby ) : fix broken CI from recent TS infra changes ( )
+fix ( cursor ) : respect sort order when using ` eachAsync ( ) ` with ` parallel ` and a sync callback
+[ FIX ] Thread view in a channel user haven ' t joined ( )
+fix ( gatsby - cli ) : pass - - verbose flag to gatsby build properly ( )
+[ Popover ] Fix resize event leak ( )
+Update travis builds : add Node 14 , remove Node 13 ( )
+Update am . m3u
+Update SceneFileConfig . js
+feat ( build ) : Transpile assuming higher version of runtime ( )
+chore ( deps ) : update dependency mocha to v7 ( bahmutov / cypress - vue - unit - test )
+Remove redundant method call
+Fixes ( )
+chore : Merge branch ' master ' into dev
+Upgrade Tailwindcss to 2 . 0 . 2 ( )
+Update pagination . d . ts
+Add @ DoNotStrip to method called from cpp in bridgeless mode
+[ react - interactions ] Rename test + fix master ( )
+chore : Register ' AWS CloudFront ' commit message scope
+sidebar
+New revision for dev build
+[ Skeleton ] Improve wave dark mode support ( )
+fix : set explicit screen when spawning own xvfb ( )
+Add . nowignore
+fix : default template on iOS ( )
+New revision for dev build
+Fine tune click - to - load visual
+fix ( shared ) : fix swiper component missingtouch events ( )
+docs ( zh ) : fix missing information in the guide ( )
+[ FIX ] Not possible to translate the label of custom fields in user ' s Info ( )
+fix ( populate ) : filter lean ` virtuals ` option to avoid mongoose - lean - virtuals setting nested virtuals with same name
+Blog example : add ` display = swap ` for the Google Font ( )
+Fabric : Image , checking for instrumentation not being null before calling on it
+Add v3 . 20 . 0 - beta . 4 to CHANGELOG
+Adds Galaxy hosting URL when creating new Meteor apps
+Merge pull request from codesignist / patch - 1
+fix ( docs ) : revert starter url in tutorial ( )
+Regression - Profile page crashing for users without password ( )
+Copy children arrays to avoid modifying props . children ( + 5 B )
+[ docs ] Change ` readOnly ` to ` disabled ` in text - fields . md example ( )
+New revision for dev build
+Updated Ghost - Admin to v3 . 35 . 5
+[ docs ] Add eslint rule to docs ( )
+Typo correction
+Skip map iteration in Children
+fix logout in with - iron - session example ( )
+Fixed duplicate event introduced in
+Merge pull request from cmmoran / feature / 1483_long_messages
+DevTools : Fix highlight updates Canvas side problem ( )
+New fromPath reg exp
+refactor ( AWS CloudFormation ) : Improve conditional logic
+Fabric : Fixed incorrect name of the prop value ` justifyContent = space - between `
+[ update ] ' yo ' to ' you ' ( )
+[ test ] Skip tests with cascading network requests ( )
+Fix running zodern : hot locally
+[ bugfix ] Revert changes made for due to webpack warnings
+Update cf - functions . md
+Use BOM string instead of BOM charCode ( )
+Updated Casper to 3 . 0 . 11
+Updated JSDocs
+Update stale . yml
+fix ( gatsby - recipes ) : remove gatsby - transformer - remark package from mdx - images recipe ( )
+interface renames
+Adjusting command to run group test 11
+Merge pull request from Snuffleupagus / _saveInProgress - reset
+Fix typo
+docs ( sites ) : add a site to showcase ( )
+Fixing blockquote end check
+[ DOC ] Remove an Ember version placeholder from the Issue Template
+chore : Bump @ servelress / enterprise - plugin
+misc ( compare - runs ) : fix error when no lh - flags arg passed ( )
+Add ` minimal - scale ` in meta tag
+fix : Fix tsconfig lookup ( cypress - io / cypress - webpack - batteries - included - preprocessor )
+fix : typo in docs ( docs / static - vs - normal - queries ) ( )
+Added guard for page . items existing in Mailgun response
+[ TextField ] Minimize usage of z - index ( ) " ( )
+ci : preserve yarn cache folder between builds in appveyor
+fix ci invocation
+fix ( gatsby - plugin - sharp ) : honor ` stripMetadata ` setting for webp output images ( )
+Bump @ types / react - virtualized from 9 . 21 . 6 to 9 . 21 . 7 ( )
+- Trying to run Browserstack inside Circle CI
+Add link to diff . html
+CI : allow skipping BrowserStack ( )
+fix : picker - select scroll
+Fix misleading comment in RCTFabricSurface API
+chore : Add Device Shots to Mockup Tools Section
+bump mongodb driver to 3 . 5 . 10
+Errant file deletion broke prism in theme ( )
+regression : read prefix from handle fn as well
+Clarify API docs ( )
+Improvements
+- Trying to run Browserstack inside Circle CI
+chore ( showcase ) : Add Thomas Wang ' s Blog ( )
+Or just simplify by combining both conditions . . .
+Updates geom , width and height of the Ellipse GO
+bump vizion
+fix ( console_generate ) : remove useless null checking
+src : Fix non - sdk build
+fix : too fast to toggle tracker syncing spinner
+Add hybrid scene tracker
+new revision for dev build
+Attempt to make make GitHub Actions work

@@ -1,0 +1,672 @@
+"Refactor initialization logic to add absolute position check for `container` in BaseViewer"
+Bump version from 1.27.3.0 to 1.27.3.1
+Add gatsby-starter-basic-bootstrap details to starters.yml
+Add Taskord to the list of project management tools in README.
+"Add simulation of migration state in reload migration tests."
+Update Fabian Schultz's portfolio entry and correct category listing in docs/sites.yml
+Update bug_report template to request Node.js version instead of Next.js
+Removed outdated Tutorials.md document from docs directory
+Refactor Dockerfile to separate yarn build from production installation step.
+Add 'dom' lib reference and update 'Defaultize' type for Preact SSR users
+Add demo section for handling animations when document visibility changes
+Refactor user avatar sync logic into `syncUserAvatar` function
+Update react-dashboard doc to clarify plugin usage with Dashboard component
+Replace workaround image with div for drag and drop to avoid Safari crash
+Add internal processX and processY handlers for collision steps in physics engine
+Add TV78 channel with updated stream URL and logo to French playlist.
+Add useAbsoluteUrl hook and update path comparison logic in AdminSidebar
+Update Uppy options documentation to include 'restrictions.allowedFileTypes'
+Update language metadata for various channels in US playlist.
+Disable config validation as a temporary workaround for issue #8257
+Update delimiter for atlas key from underscore to exclamation in SpineFile.
+Add discardStdin flag to ora spinner configuration in CLI renderer
+"Add maintenance improvements and update dependency versions in CHANGELOG"
+Refactor TextInput to use React.Children.count for child count calculation
+Add test case for default function on array returning publisher value (gh-9351)(gh-6155)
+Fix useAutocomplete behavior to reset input value on blur regardless of freeSolo status
+"Adjust classRenderer to dynamically set SVG height based on graph size"
+Update Quick Start guide to reflect new Gatsby CLI usage and workflow
+"Remove unused TransformMatrix require in CanvasRenderer"
+Update form controls to use Bootstrap's `form-select` and `form-check` classes
+Remove 'jingo' from documentation generators list in README.
+Added Krisp to list of chat tools in README
+Update dayjs to 1.9.7 in yarn.lock
+Update `asPath` description in `next/router` API docs for clarity on `basePath` and `locale` exclusion.
+"Update Swedish channel playlist and add logo for SVT2"
+"Update artifact upload conditions to exclude pull requests"
+Add 'math' tag to cartesianProduct snippet for better categorization
+Update Cypress version notation and migration guide link in browser spec snapshot
+Comment out 'Getting Started' and 'Directives' links in sidebar markdown
+"Updated templates page title and description to emphasize free React templates"
+Bump version to 3.20.3 for package 'ghost'
+Update dependencies including log-symbols, mocha, chokidar, and various others to newer versions.
+Add exception handling to UIManagerBinding::completeRoot calls
+Added GEM Arabia channel with Arabic language to ca.m3u playlist.
+Update README badge link from Travis CI to GitHub Actions.
+Bump version to 1.3.0 and update client dependencies
+"Refactor duration plugin types to use default export and adjust Duration class declaration"
+Add GetTileToWorldYFunction to handle translation based on tilemap orientation
+Update CHANGELOG for 1.8.25 with bug fixes for CustomParseFormat, Duration plugin, locale type, and UTC plugin.
+Correct `reject` snippet description and usage to accurately reflect its functionality
+Update migration docs with close button changes and new navs variables
+Refactor Swatch component to use `theme-ui` and clean up style props.
+Refactor Handle import to ensure eager loading in child.js
+Bump version from 1.26.3.109 to 1.26.3.110
+Add dynamic theming configuration and `%%init%%` directive support in docs for v8.7.0
+"Refactor HSLToRGB function for clarity and precision in output formatting"
+Add FUNDING.yml to enable Open Collective support
+"Update CHANGELOG.md to include v3.23.1 bugfix entry for tracked mutation deprecations"
+Remove deprecated authors input serializer from API v2.
+"Refactor navigation logic to highlight active link based on full URL"
+Optimize WebGL rendering by forcing batch persistence and adjusting child rendering flow
+Add LiveSession analytics tool to README resources list
+Update channel URLs and remove discontinued streams in co.m3u
+Add missing `alt` attribute to img tags in importer_spec.js
+Add kmToMiles snippet with conversion function and example
+Update Open Source commitment link in Contributing guide.
+Refactor and optimize pretty-print functionality in advanced-settings.js
+Remove test cleanup fail condition from Travis CI config
+Add new stream URL for Euronews English channel in fr.m3u playlist
+Use require.resolve for webpack aliasing to ensure module resolution consistency
+Add 'lcov', 'macos', 'serializers', and 'testname' to cspell dictionary.
+Refactor: Remove redundant check for 'options.v' in CLI help command.
+Add tooltip support and open link in new tab for class diagram titles
+Update tus endpoint to use https in end-to-end drag-drop test
+Bump ghost package version to 3.20.0
+Fix API Gateway role to support cross-partition AWS accounts
+Refactor MarkdownLinks click handler to improve link detection
+"Enhance fromPhysicsEditor function with improved documentation and `addToWorld` parameter"
+Update _flowconfig suppress_comment regex and remove experimental flags
+Update success messages to specify 'x64' architecture for serverless uploads
+"Added Mod key mapping for keyCode 224 in keyNames object"
+Add new sponsor logo and link to index page
+Add Gancio to README as a shared agenda for local communities.
+Update @algolia dependencies to 4.8.3 and minor dependency resolutions.
+"Update isAlphaNumeric snippet: change from match to test method and adjust difficulty tag from intermediate to beginner"
+Update static filtering parser checklist, remove incorrect localhost entry, fix regex example.
+Refine heading regex to disallow trailing spaces in markdown rules
+Added chat section and Slack invite to README.
+Improve documentation clarity on `.invisible` class effects for screen readers
+Bump version to 3.29.1 for package ghost
+Update core client submodule to 99d951cbe95021aeae7ea2ffb60df0ee7ae9ea02
+Refactor tests to simplify `assert.throws` message check
+Update Baraza TV channel entries and stream URLs in gr.m3u playlist.
+Update rollup to version 1.31.1 and adjust yarn.lock dependencies
+Fix typo in theme key 'nord_dark' for consistency.
+Update Duet demo link in non-free project management documentation.
+Refactor performance observer and add fallback for paint metrics tracking.
+Improve regex in tokenizer to handle ordered list item delimiters
+Update Kyrgyz language metadata for multiple channels in kg.m3u
+Upgrade fs-extra from 9.0.0 to 9.0.1 in yarn.lock
+Improved error handling and added stdout logging for Java bridge build in AWS invokeLocal plugin
+Refactor RCTModalHostViewComponentView to use shared state pointer and update state management logic
+Update component, typography, and icon paths to use absolute directories in gatsby-config.
+Fix null check in annotation getFieldObject and simplify field filter in PDFDocument.
+Fix typo in require check condition for automatic extension loading in showdown.js
+Corrected rotation calculation in demo labels.
+Add hashChange event emission on hash change in HashNavigation component
+Refactor the ConnectedComment to use a single-line connect invocation for clarity
+Update setup doc: Expand title and include React+Typescript setup variations and deprecations.
+Add new VBScript constants to syntax highlighter rules
+Add Node.js version pin and lint step to GitHub Actions workflow
+Add new Spacetoon stream URL and cleanup m3u playlist entries
+Update backers count in README from plural to singular.
+"Enhance retry mechanism by continuing part uploads after successful retries in MultipartUploader"
+Add "Edit this Page" link and update changelog format in docs
+Update uBlock version to 1.28.1.1 and modify related URLs in updates.json
+Filter out 'max-old-space-size' from worker process args
+Refactor worker message handler to streamline `GetOperatorList` handling
+Update Node.js version in GitHub Actions workflow to 13.x
+Correct capitalization for WriteFreely in README.
+"Add Designer and Developer discriminators for querying tests"
+Fix flattenObject to handle null objects and empty nested objects.
+"Update nav styles for improved readability and visual consistency"
+Fixed typo in README regarding securityLevel documentation for mermaid diagrams.
+"Remove AMP query handling for SSG pages in Next.js server"
+Refactor pipelines and input handling, improve performance, and fix right-click detection on macOS.
+"Update CHANGELOG for version 1.21.1 with Zoom fixes and dependency removals"
+Fix default role attribute in SvgIcon to enhance accessibility
+Add security level configuration details and tag handling info to docs
+Updated ApplicationDelegate to pass checkbox state along with response in callback.
+Update AMG TV logo, add BBC Persian, and refresh GEM network channel URLs.
+Refactor formatDuration function to pad numbers and handle zero correctly in stats component.
+"Fix default value for channel in IntegrationsTable renderRow callback"
+Update prettier to version 2.0.2 in yarn.lock
+Updated submodule reference to c6efa32 for core client.
+Add regression test for delegated media event handling without direct listener
+Add package-lock.json for dalek package with dependencies
+Add COVID-19 tracking site 'FlattenTheCurve' to documentation
+Fix typo in queue `unshiftAsync` property documentation
+Enforce usage of `const` over `let` in `toolbar.js` for immutable variables
+Update Komga description to reflect language change to Java/Docker
+Added root and containers imports, removed code import in SASS docs.
+Update Amman TV stream URL and clean-up entries in jo.m3u playlist
+Add Al Masirah Mubacher channel to YE playlist
+Update @types/sinon to version 9.0.9 in yarn.lock
+Update README: Change 'Developer' to 'Publisher' for Edge extension and update Edge Add-ons links.
+Fix test by specifying parser option in Babel error recovery testCase
+Add JetBrains Rider to supported editors in launchEditor utils
+Add culling boundaries to BaseCamera for optimized rendering
+Fix incorrect hook name for export event in Generator class
+Add removeListeners method and refactor NativeTVNavigationEventEmitter to lazy load moduleName.
+Update media query documentation for broader styling solution compatibility
+Add guard clause to avoid processing undefined fileName dependencies #7097
+Update @testing-library/dom to version 7.22.2 in yarn.lock
+Fix: Clear RenderTexture contents on resize regardless of current dimensions
+Add StaggeredWorldToTileXY conversion function for tilemap component
+Add 'Travel Diary' digital travelogue to sites documentation
+"Refactor surface activity check logic in FabricUIManager"
+Refactor NativeSelectInput tests to use createClientRender instead of createShallow
+Update karma.conf.js to conditionally start Connect based on sauceLabs configuration
+Add logging for resourcePath in test script
+Update README to clarify usage of Google Tag Manager with Google Analytics in Gatsby plugin.
+Clear contentView on legacy view manager interop component recycle.
+Refactor error handling to improve clarity and maintainability in api.js
+Optimize jQuery instance retrieval by refining type check and instantiation sequence
+Refactor Shader.js to use WebGL methods directly for setting uniform values
+Refactor: Simplify asciidoc title extraction with optional chaining and nullish coalescing
+Enhanced call-to-action enthusiasm in README with punctuation update.
+Add language identifier to Python code block in Coin Change 2 problem markdown.
+Update _redirects to route /static/x/* to material-ui-x netlify app
+"Document new bug fixes and removal of 'timeout' setting support in AWS HTTP API"
+"Add cross-env for setting environment variables across platforms"
+Add quickapp-vue build step to runtime script in package.json
+Update README: Refine explanation of algorithm paradigms in Korean
+Reduce wait time in tests and add new argument parsing cases
+Correct typo in Korean Vuex documentation for plugin synchronization example
+Fix compatibility layer to check class/className equivalence before component handling
+"Add reduced motion support for spinners, update color function documentation"
+"Enhance error message for Cypress proxy layer rewrites to prompt issue reporting"
+Fix typo in next.config.js Sentry config comment
+Update Glendale 11 stream URL in US channels playlist.
+Ensure RCTEventEmitter subclasses override 'supportedEvents' during initialization
+Update release-drafter configuration to use square brackets for issue numbers
+Fix typo in unit test description for element creation
+Update documentation for API configuration methods and parameters
+Update channel category labels and fix typos in IPTV playlist.
+Update CBSN channel logos and stream URLs in US playlist
+Update @types/sinon to 7.5.2 for improved type definitions
+Fix typo in workflow job name for consistency
+Add support for point object parsing in Tiled map parser
+Add Apache Directory Studio to README's database section
+Clarify drag and damping documentation in Body.js
+Standardize 'e-commerce' terminology in blog post
+Refactor Systems class to cache 'events' and 'settings' references for improved performance.
+Add query parameter to sanitize SVG images in README
+"Update Build Status badge link to track master branch in README"
+Updated TypeScript definitions path from 'lib' to 'dist' in package.json
+Update node-fetch to 2.6.1 for security patch in yarn.lock
+Fix typo in code block language and improve HOC prop exclusion typing
+Add Rheinmain TV channel entry to de.m3u playlist
+Fix incorrect event reference in handleSubmit of login page
+Fix container pointToContainer method to handle null parent case
+Added GitHub edit link and user journey definition to docs
+Refactor GlobalWorkerOptions with improved typings and initialization
+Switch CI jobs to run on Ubuntu and add 10-minute timeout.
+Updated channel logos and stream URLs for Extrema TV, Multimedios Costa Rica, Telesur, and TV Sur Canal 14 in cr.m
+Refine WebGL UtilityPipeline blit condition and rename vertex setting method
+Update environment variable for standalone test configuration in package.json
+Update snapshot for plugin.test.js to reflect GraphQL query capitalization fix
+Add MTV Lebanon stream and update LBC International logo
+Update @testing-library/dom to v7.1.0 in yarn.lock
+Bump Cypress version from 6.1.0 to 6.2.0
+"Remove .only to include all tests in Snippets API suite"
+Refactor TileToWorldXY to use modular TileToWorldX and TileToWorldY functions.
+Refactor Mesh Game Object class description for clarity and correctness
+Update README section title from 'Contribution' to 'Contributions'
+Update documentation to correctly refer to "Node.js" instead of "Node".
+Update README to specify compatibility with webpack 4.x+, Babel 7.x+, and remove specific Node version reference.
+Remove redundant null parent check in contentscript.js
+Optimize hyphenateStyleName regex initialization
+Bump styled-components version to 5.2.0-test.8
+Add blog post about the role of founding organizations in sustaining open source communities
+Optimize route matching logic to early return on mismatch
+Update clipboard, prismjs, and tiny-emitter to latest versions in yarn.lock
+Update eslint-config rules and fix documentation link in Gatsby utils
+Update meteor bundle version to 12.16.0.0
+Refactor TextField tests to use React Testing Library and improve assertions
+Fix line widget removal check by testing className property
+Calculate center of mass for single-part bodies in Matter.js Body module
+Update KCTV streaming URL to use DASH protocol in kp.m3u channel list.
+Refactor destruction of scripting instance into async method in app.js
+Update email link to 'mailto:' in blog post 'Introducing Will It Build'
+Add janosh.dev site, update Ocean artUp & Studenten bilden Schüler entries, remove duplicate listings
+Ensure session ends after transactions in tests
+Improve comment clarity in MatterPhysics#bodies documentation
+Update uBlock extension version to 1.32.3.1 and corresponding download link in updates.json.
+Bump version to 1.54.0-dev in package.json
+"Refactor ValueLabelProps to include index and correct ordering of properties"
+Added demo link to Navidrome Music Streamer entry in README.
+Refactor createDevelopQueue to streamline query job handling in Gatsby queue system.
+Bump @fortawesome/react-fontawesome from 0.1.11 to 0.1.12
+"Extend typings for GraphQL and router handling in Gatsby types"
+Update migration docs with new references and Dropbox TypeScript story
+Add color property to card-footer in SCSS for improved styling
+Add binary search algorithm example to snippets
+Add "Inspecting Tokens" section to Monaco editor documentation.
+Update @types/node from 14.11.2 to 14.11.8 in yarn.lock
+Bump version to 3.30.2 for package 'ghost'
+Add Bonsaiilabs to docs sites list with team and educational details
+Fixed synchronous callback on livechat room close to be asynchronous
+Add 'Arabic' language tag to Al Alamiya channel entries in m3u playlist
+Remove outdated techsith video link from README translations section.
+Fix types for color properties from boolean to number in MatterDebugConfig typings
+"Add babel runtime version resolution to ensure consistency across environments"
+Update Romanian channel playlist links and metadata.
+Refactor Send entry in README.md to include Clients link under distributed filesystems section
+Update US channel playlist with new streams and remove outdated links
+Disabled texture setting in WebGLRenderer for multiple commands.
+Update release-drafter config with new category titles and labels
+Refactor gitGraph parser for improved token handling
+Update eslint-config-standard to v15.0.1
+Update dependencies including autoprefixer, browserslist, caniuse-lite, and others
+Add Spotless to related projects list with Maven and Gradle integration links.
+Update test origin URLs from google.com to transloadit.com in header blacklist tests
+Refine tarball regex check in Modularizer install function.
+Add pnpm-debug.log* to .gitignore template
+Add Gatsby + Capacitor starter for mobile app development; remove Prettier for ESLint compatibility; support Firebase Hosting; implement dynamic markdown blog pages
+Add API availability annotation to WKDataDetectorTypes method in RCTConvert
+"Add display-capture permission to bbbLiveView iframe attributes"
+Bump version from 3.26.0 to 3.26.1
+Update cspell.json to refine spelling exclusion patterns and include .png files and test files with extensions.
+"Add support for .config.cjs CommonJS config files in Common.isConfigFile method"
+Add `PointData` type and extend `addPoint` method to include optional data payload in `UserFlow`
+Added TaxFreeSnus sponsor logo to index page.
+Add graceful shutdown on stdin end for interactive sessions
+Add getComputedStyle method to ComponentDescriptor for element style access
+Refactor settings_spec to consolidate env display tests into one scenario
+Add demo and source code links for ubookmark in README
+Updated Filipino translations for pop-up related messages and settings prompts.
+Add frame skipping logic to animation execution for Fabric in NativeAnimatedModule
+"Reverse thread sorting order in ContextualBar List component"
+Update priorities in API spec, remove note about themes being on back burner
+Update preload count expectation for Safari in integration test
+Refactor assignIn function implementation for clarity and efficiency
+"Refactor ReactModalHostView to handle activity and window state more robustly"
+Refactor 'href' and 'call' commands to target 'node' instead of 'task' in flowchart parser
+Add compatibility check and logging for android_hyphenationFrequency in ReactTextAnchorViewManager
+Update jsFiddle embed links to include CSS in examples documentation
+Fix navigation issue and improve room access check in livechatReadOnly component
+Update securityGroupIds and subnetIds items to support awsCfInstruction references
+Updated number of publicly available IPTV channels from 8000+ to 4000+ in README.
+Added SyncTube to streaming media systems list in README.
+Add flag to track completion in 'async.until' example
+"Change color value assignment to use object values instead of RGBA string conversion"
+Add cycleGenerator snippet with infinite looping functionality
+Add attributes property to WebGLPipelineShaderConfig to define shader attribute data
+Adjust Demo component to conditionally toggle code preview based on user interaction
+Update README with revised TypeScript usage and integrations with standard tooling.
+Update pronoun for inclusivity in middleware documentation
+Refactor rewarded video ad methods and implement retry logic on load failure
+Bump prismjs from 1.17.1 to 1.18.0 and update yarn.lock
+Update package BUNDLE_VERSION to 8.17.0.0
+Fix rounding issue in getTimezoneOffset for Firefox compatibility
+Fix timeout constant from 1s to 30s in start-server.ts
+Update VS Code debugging instructions to correct node_modules path
+Fixed incorrect message in stopTrackingHeapObjects handler in Connection.cpp.
+"Add Entity Relationship Diagram link to documentation sidebar"
+Update lazy route component for omnichannel custom fields
+Remove temporary workaround for AWS provisioned concurrency alias issue
+Update README with incremented channel counts for News, Other, English, French, Undefined, Canada, and the United States categories.
+"Update CHANGELOG for WebGL pipeline renaming and optimizations"
+"Add breaking changes in 4.1.0, update features, and introduce new translations"
+Fix typo in project description for resume generator.
+Fixed incorrect type import in isoWeek plugin definition.
+Add `$ _forwarded` shorthand property to `mangle.json` and ensure newline at EOF.
+Add PhysicsEditorParser support in Factory class
+Refactor RCTScrollViewComponentView to use scaled visible frame for child mounting checks
+Updated image optimization details and links in Next.js docs
+Add test case for casting errors with 'kind' field (gh-8953)
+Add job to sync translations weekly in CircleCI config
+Ensure lazy-loaded images are visible after loading
+Add preBatch and postBatch calls to RopeWebGLRenderer for WebGL pipeline processing
+Update uBlock version to 1.26.3.9 in updates.json
+Initialize offlineChannel array to prevent undefined errors
+`Update @emotion/core from 10.0.28 to 10.0.34 in yarn.lock`
+Update markdown-to-jsx to 6.11.0 in yarn.lock
+"Update usage documentation for mermaid with simplified guidance for beginners"
+"Adjust AppDrawerNavItem font weight and update link color to secondary"
+Adjust gitignore for Electron-specific build outputs and Next.js directories
+Fix variable name typo in null check validation for 'name' field in guide docs
+"Enforce strict flow typing and update ImageSource with clearer types and sync comments"
+Update stream URL for 901755292467805046881696 in br.m3u
+Add `@parcel/diagnostic` dependency to scope-hoisting package
+`Fix: Generate fromEmail domain dynamically to avoid using user's email as sender`
+Change thumbnail output format to JPEG with quality 80
+Update playlist with corrected channel ids, languages, and EPG source.
+"Rename workflow file by removing .yml extension"
+Remove obsolete changelog for fixed formatting in AssignmentExpression with ClassExpression (#9741)
+Update Shhh description and remove extraneous license information
+Add new sponsor logo and link to index page
+Refactor RadioButtonIcon styles and class application for Safari alignment fix.
+Add transparent background and icon to active dropdown item in subnav styling
+"Fix EditButton visibility condition to check upload status before allowing file edit"
+"Updated regex to match all 0.0.0.x as local IP in storage.js"
+Refactor access to bridge instance in RCTFileReaderModule.
+"Modify audit step to exclude low severity vulnerabilities in CI workflow"
+Refactor data.js to use object destructuring and async/await syntax for cleaner code.
+Refactor onCreateNode, createSchemaCustomization, and createPages to use runApiForSections helper function
+Improved popover scrolling and fit by adding overflow auto and max-height constraints.
+Update CONTRIBUTING.md to clarify when a PR can be submitted without an issue
+Update tutorial to use straight quotes and minor content changes.
+Replace Citadel with Corteza in CRM software list
+Refactor message passing to handle port disconnection cleanly
+Add prime number checking functionality to sample.csharp
+Update README with NPMPackageJson and NPMScript sections, including prettier-ignore blocks.
+Update README to indicate upcoming support for options in gatsby-recipes
+Update example link text for absolute imports in docs
+Fix typos in n00b-syntaxReference documentation
+Add Alex Perronnet Personal Website to sites listing
+Add link to new Mermaid Live-Editor Beta and update CDN reference in 8.6.0 docs
+Update @types/prettier from 2.0.0 to 2.0.1 in yarn.lock
+Update documentation description to include Bootstrap v5 releases
+Add fix for react-select ignoring HTML5 form attribute
+Update branding from GatsbyJS to Gatsby and correct Github to GitHub with improved link paths and security.
+Initialize persistor with callback and update loading component in PersistGate.
+Added new Tamil channels and updated stream URLs in channels/in.m3u.
+Update package dependencies for project maintenance
+Update ESLint version from 7.13.0 to 7.14.0 in package.json
+Add blog post about the 100DaysOfGatsby Challenge 3 with tutorials on optimizing images using gatsby-image.
+Fix return statement in Pascal mode definition for CodeMirror.
+Update n00b-overview.md with clearer documentation on using mermaid for diagrams
+Add Aliman TV to lb.m3u playlist with updated logo and stream URL.
+Update @material-ui/core peer dependency to ^4.9.10 in material-ui-lab package
+Added Sky Eagle TV channel to US playlist.
+"Add 'lighthouse' tag to WebAIM Million blog post for better categorization"
+Refactor lint import and update process exit condition to include lint check
+Update site descriptions and add Mallikarjun Katakol Photography to sites list
+Add rounding utility functions for pixel-grid alignment in React fabric
+Refine getBreakpoint parameter typing with SwiperOptions breakpoints
+Update AMP support introduction for clarity and add reference link.
+Fix typo in error message for transformHeaders validation in gatsby-plugin-netlify
+Add computed slide size retrieval and document slide navigation methods in README
+Refactor document-blocked.js to use native DOM methods instead of `uDom` library functions.
+Refactor Gruntfile for streamlined automated release task configuration
+Update Firefox Account Server documentation link in README.
+Enable CORS in development server setup
+Add isValid method and export various types in moment typings
+Update dependencies and resolve inconsistencies in yarn.lock
+Fix missing 'extends' in MemberInterestRoute class definition
+Update uBlock0 extension version to 1.27.11.12 in updates.json
+Add React production profiling instructions to CLI docs for Next.js 9.5+
+"Update Gantt documentation to include formatting options for date and time"
+Update postcss selector map to handle 'page' keyword properly
+Bump version to 14.3.3 for package 'standard'
+Add KTLA 5 stream link to US channels playlist
+Optimize bubbleSort implementation with early exit condition
+Added HttPlaceholder service description to README.md
+Add removeAccents utility function to strip accents from strings
+Fix typo in SSR Caching link description in custom server docs.
+"Removed multiple Hindi channel streams from unsorted playlist"
+Fix: toggle readOnly state on TextareaInput based on prop change.
+Added Attention Insight to Analytics section in Awesome Design Plugins list.
+Add FusionAuth and remove Auth0 under Federated Identity/Authentication section
+Add createEvent utility and spy in uncontrolled input test for better assertion
+"Update documentation links and param info in model.js hydrate function"
+Refactor variable name from newFunction to functionResource for clarity
+Drop support for bower package manager; recommend unpkg or cdnjs instead.
+Add support for environment reloading in cluster mode process restarts
+Add Camera zoomX/Y properties and refactor Render Texture with RenderTarget class
+Refactor SchemaJsonParser to handle new 'type' field and 'spec' structure
+Update uBlock extension version to 1.28.5.16 in updates.json
+Update Spine runtime to 3.8.95 and enhance plugin documentation
+Add note about implicit fragments not working in GraphiQL to gatsby-image tutorial
+"Update .npmignore to correct case sensitivity in History.md and exclude examples, .vscode, and .eslintignore"
+Update Drupal sourcing docs to include Gatsby Live Preview configuration
+Update eslint peer dependency range to <7.0.0 in vue-cli-plugin-eslint
+Update supportsTouchEvents.md to simplify detection logic and adjust tag level from intermediate to beginner
+"Add Al Yaum channel and update Arabic channel list in sy.m3u"
+Updated Palestine Satellite Channel entries with new streams and corrected channel name.
+Refactor `draw` method to `onDraw` in WebGLPipeline for extensibility.
+Update package.json to credit all Preact contributors
+"Adjust Tab component styles for small screens"
+Refactor UserFlow.js to use const, enhance annotations, and rename completion methods.
+Update gettingStarted.md with revised mermaid hosting methods and additional resource links
+Update uBlock0 extension to version 1.26.1.8 with new download links
+Update static filtering parser checklist with valid and invalid domain and denyallow option values
+Updated playlist links for various TV channels in 'ir.m3u'.
+Improve regex for string character & adjust operator highlighting in Ruby mode
+Update Blush illustration description for clarity and consistency
+Update notistack to version 1.0.2 in yarn.lock
+"Refactor background script to remove special case for React docs URL"
+Update blog post to correct Max Stoiber's role and add new YouTube link for Gatsby Admin demo
+Refactor Filter to ES6 class syntax and clean up prototypes
+"Add RERO ILS to the list of library management software in README.md"
+Update CONTRIBUTING.md to clarify PR submission guidelines
+Update acknowledgments for contributions in CHANGELOG v3.50.1
+Add Armenian translation link to README, remove other outdated links
+Refactor WebGLShader bind method and rename parameter to better clarify its use
+Refactor GetStaticPaths to use GetStaticPathsResult type
+Refactor DEFS.bzl to streamline codegen rule labels and reorganize ios_exported_headers
+Corrected Thomas Wang's Twitter URL in blog post
+Bump ember-source version from 3.20.0 to 3.21.0
+Refactor 'format' function to avoid naming conflict in 'hexo/router.js'
+Optimize MultiPipeline by passing sprite to pipeline set method to reduce flushes
+Update description and feature list for Kentico Kontent Gatsby starter in docs
+Refactor CameraManager to filter renderable children and decouple preRender parameter
+Update material-ui-popup-state to version 1.6.1
+Add 'needSave' class to body based on matrixIsDirty status in popup
+Disable npm version pinning in Travis CI config
+Add codegen_rule label to all react-native codegen build rules
+"Add generics to WrapPageElementNodeArgs and WrapPageElementBrowserArgs interfaces"
+Refactor to directly resolve openProject with config env settings in settings_spec tests
+"Rename unreleased SCSS changelog for PR 9710 for naming consistency."
+"Remove redundant path from asset_name in GitHub Actions release workflow"
+"Remove default auto-reconnect options in MongoConnection constructor"
+Update French translation for 'release notes' in VuePress config
+"Add title and description filter functionality to message search"
+Integrate expanded pugConfig options into PugTransformer.
+"Update platform-specific build targets and revise DEPS revisions for nw, src-internal"
+Update CodeMirror and React versions and switch to minified sources
+Add post about Uppy 1.22 release with Unsplash integration and webcam enhancements
+Updated smartphone SVG dimensions to 15x15px
+"Enable previously skipped test for maintaining focus when adding children around input"
+Update CHANGELOG: Refactor TextureTintPipeline, add WebGLRenderer.setTextureSource, and revise WebGLRenderer.setTexture2D.
+Update `examples.md` with new Mermaid sequences and flowchart syntax examples.
+Update documentation links to Gatsby internals terminology
+Add MongooseQueryOptions type and update Query interface to use new type in mongoose typings
+Add check to skip discriminatorKey in document overwrite method
+Update optimized Bootstrap JS imports and improve dependency instructions
+Implement custom hitTest logic to return self for _adapter.paperView in LegacyViewManagerInterop
+"Refactor clearReactRoot method and add missing ViewGroup import"
+Update Dutch translations for enter behavior and on/off labels
+Refactor page query processing to avoid querying null pages
+Update dependencies and resolve inconsistencies in yarn.lock
+"Add pull request template with contribution guidelines"
+Update docstring for validateSync to clarify array element path syntax
+Add Gatsby Blog Starter Dyuzz project to starters list with detailed features and tags.
+Bump version to 1.53.0-dev in package.json
+"Include attributes in conditional for token build wrap check"
+"Add Typographer plugin to Awesome Design Plugins list"
+Refactor mesh components and add new camera projection logic
+Fix typo in Gatsby theme README example description
+Adjust transform origin and calculate dynamic borderRadius in Skeleton component
+Refactor condition to improve handling of ArrayBuffer transfers in LoopbackPort
+Add PrismJS syntax highlighting stylesheet to Gatsby blog starter
+Updated stale GitHub action to include 'Stage: Confirmed' as an exempt label.
+Fix typo in Docspell description: change 'Auo-tagging' to 'Auto-tagging'.
+Update core/client subproject to commit 05ec94be
+Refactor conditional assignment for `strEnd` into a ternary operation in `Tokenizer.js`
+Fix typo in testem.js comment about MIME type error.
+"Fix Chinese README: Correct traversal loop condition symbol"
+Refactor file structure and update relative imports for testmode module
+Update nw_src_revision to 96156fbafca2c275f3ee9e76ece6f2021ac9a94e
+Add Gatsby Starter Woo with responsive design and React Helmet support
+Fixed file path resolution in plugin development documentation example
+Add 'feature' label to exemptLabels in stale bot configuration
+Update postcss dependency to ^8.1.7 in gatsby-plugin-image
+"Adjust `hr` styling for improved cross-browser consistency"
+"Fix getApp usage to safely handle non-function scenarios in styles loader"
+"Update select font-size to use variable for consistency"
+Update README with the correct link for Discriminated Unions in TypeScript documentation.
+Updated .eslintignore and modified scaffold support along with adding e2e test for early exit.
+Refactor menu initialization to use role property in Electron app
+Fix typo in documentation for isIsogram function: change 'Returns false is called' to 'Returns false if called'.
+Add source map files to gitignore with wildcard pattern
+Update README to use npm script for running unit tests
+Refactor setDiff to use get helper for property access
+Refactor RouterService isActive calls to use this.router directly
+Update nw_node_revision to a078d47ce68708c8e512197628a0da095f9c86ee in DEPS
+"Update Google provider credentials doc to include Cloud Build API"
+Corrected Sauce Labs spelling in Readme markdown
+Add getValue and cx as instance methods to Select component
+Update CRA version recommendation for eslint-plugin-react-hooks in README
+Update mermaid CLI repository link in documentation
+Update Node.js version to 12 in AppVeyor configuration
+Update Node.js versions in .travis.yml to test against version 14 only
+Update Octokit import and instantiation in api controller
+Check for existing key before adding image to SpineFile multi-file loader
+Fix typo in azure-python serverless.yml template comment
+"Update CHANGELOG for eslint-plugin-react-hooks to version 4.1.2 with TypeScript crash fix"
+Improve clarity in deepFreeze documentation by adjusting pronoun usage.
+Update Azure pipeline lint job to list changed files after spellcheck
+Add 'Camera.rotateTo' effect and deprecate several features in CHANGELOG.
+Bump meteor-tool package version to 1.12.0-beta.3
+Update nw_src_revision to 98c5e868a380af56a4a83817741627775ff3318d in DEPS
+Fix displayName assignment in RNTesterStatePersister for compatibility with newer Flow version.
+Improve grammar in migration documentation
+"Refine clipboard button insertion selector for highlights in application.js"
+Bump version to 1.50.0-dev in package.json
+Fix: Remove unnecessary parent check before view deletion in MountingManager
+Update webpack-uni-pages-loader to compilerVersion 2.8.10
+Fix event interceptor crash by adding weakSelf null check in RCTLegacyViewManagerInteropCoordinator.
+"Unmock collect-updates in publish-from-git tests for better integration testing"
+Add nomodule attribute to scripts in server mode for ModernRenderer.
+"Add GitHub action to cancel previous runs on new commits to PRs"
+Update JSDoc for disableContextMenu to return 'this' instead of 'Phaser.Input.Mouse.MouseManager'
+Update 'ShopDetails' description in README for clarity and accuracy.
+"Change KeyValue value whitespace to pre for consistent formatting"
+"Load global environment config at the start of the export process"
+"Add continuous integration environment variable to Karma config"
+Update API priorities description for clarity in the documentation
+Bump pm2 version to 4.5.1
+"Add style to hide .lh-tools__dropdown by default"
+Fix potential null reference in SAML_Custom_Default_user_data_fieldmap migration
+"Refactor: Move setLocationHref from AnimationItem to LottiePlayer type definition"
+Update Vercel deployment link in i18n-routing example README
+Add dashboard wrappers to pkg config for serverless enterprise plugin
+Fix null check in annotation.getFieldObject and optimize field filter condition
+"Add migration steps for jquery changes in v1.8.3"
+Reorder environment detection to prioritize web workers in getEnvironment.js
+Update release date for D3 6.0 in CHANGES.md
+"Refactor karma.conf.js to remove CI condition for Chromium browser detection"
+Remove obsolete `npm-cross-link` dependency from `package.json`
+Fix destructuring assignment for unused variable in regex match
+Update code block language from bash to shell in markdown glossary docs
+Correct import statement for User interface in TypeScript example
+"Fix working directory path in CircleCI config for markdown table benchmarks"
+"Add step-by-step code highlight instructions in README"
+Fix provider naming inconsistency and clean up callback URL generation
+Add GetColorFromValue function to Color module
+Fix crash on null event by providing empty dictionary in event interceptor
+Add 'Continue', 'Do', 'Until', 'Loop', 'Next', 'With', 'Exit', 'Function', 'Property', 'Type
+"Remove Dublin webcam and update TG4 stream URL in IE channel list"
+Add 'requireUncached' snippet for reloading modules in Node.js
+Update nw_src_revision to 245fdcd8fdd76afd5a5eac2ff8539af9e5f427ca
+"Refactor error handling in storeConfig with proper SLS_DEBUG conditional block"
+Added fallback to HTTP headers for 2FA code and method when not provided in _checkCodeForUser function.
+Fix handling of resolved promise in Model.init() example in FAQ docs
+`Add lodash and fast-levenshtein dependencies for command suggestion utility`
+Fix grammar and clarity in styled-components initialization warning message
+"Fix click propagation and context menu issues by applying handlers to container instead of wrapper"
+Add script to assert changes in packages and CircleCI config before linting and typechecks in CI workflow.
+Fix #8422 - Ensure handling of result by deferring done() call with process.nextTick
+"Handle missing subscription edge case in readThread function"
+"Add verbose reporting and update messaging for source file changes in build command"
+Fix typo in window.removeEventListener for resize event in Popover component
+"Update Travis CI to test with Node.js version 14 instead of 13"
+Add SONG TV Armenia stream link to am.m3u playlist
+Change default file extension in SceneFileConfig from 'txt' to 'js'
+Add babel runtime-corejs2 version to babel preset config
+Update mocha to version 7.0.0 for improved testing features and fixes
+Fix slideNext function to ensure slideTo is always called
+"Refactor LocalizationProvider propTypes for children to PropTypes.node"
+Fixed duplicated router addition in plugin development docs (ZH)
+Update Tailwind CSS to version 2.0.2 in devDependencies.
+Fix grammar in PaginationOptions interface documentation
+Add DoNotStrip annotation to createTimer method in JavaTimerManager
+"Rename test file to reflect deprecated event responder system"
+Add 'AWS CloudFront' to commitlint config options
+Add onload script in sidebar to auto-click chapter element
+Bump version from 1.26.1.2 to 1.26.1.3
+"Update Skeleton component to use theme color for wave animation background"
+Add explicit screen definition to XVFB args to prevent Electron crash
+Add .nowignore to exclude all files except documentation from deployments
+Update Podfile to use bang syntax for `use_react_native` call.
+Bump version from 1.26.3.2 to 1.26.3.3
+Add bottom margin to #clickToLoad element in CSS
+Add touch events support and ensure proper trailing comma in Swiper component
+"Enable Vuex in Vue instance by adding Vue.use(Vuex) in Chinese documentation guide"
+Fix display of custom field labels in user info tab
+"Enhance applyPaths to support filtering and mapping virtual paths for lean queries"
+Optimize font loading by adding 'display=swap' to Google Fonts link in blog template
+Add null-check for image instrumentation tracking in RCTImageComponentView.
+Add v3.20.0-beta.4 entry to CHANGELOG with Glimmer VM 0.54.0 update
+Add hosting info message to CLI commands output.
+Fix incorrect array reference in slideTo logic
+Update Gatsby starter URL in Part Zero tutorial doc
+Refactor logic for checking local password existence with optional chaining
+Fix mutation of children array by creating shallow copies in diff function
+Update text fields documentation to include `disabled` attribute.
+Bump version from 1.31.1.12 to 1.31.1.13
+Updated core/client subproject to c534b74746828d064751f419e65360bb5b544dcc
+Add ESLint plugin for detecting unused Material-UI classes to related projects documentation.
+Fix grammar in README for Apache Server Configs description
+Optimize Children.map implementation by integrating map into reduce function
+Fix session handling by removing redundant save call on logout
+Fix event annotation for Phaser.Game#step from PRE_STEP to STEP
+"Change sequence number color from white to black for better readability in dark theme"
+Use window inner dimensions for canvas size instead of screen available size
+Fix regex in Vertices.fromPath to correctly parse negative and exponential values
+Refine error logging conditions for stack monitoring in AWS plugin.
+Fix alignment string comparison for YGAlignSpaceBetween in fabric conversions.
+Fix typo in README example for cxs integration
+Add FontAwesomeIconSize.png to regression test blacklist due to network dependencies
+Update hot package dependencies and remove specified versions from api.versionsFrom
+Removed unused localePath variable for cleaner locale loading logic
+Added dataType specification as json for httpclient request in cf-functions.md documentation.
+Refactor BOM constant naming and usage to improve readability
+Update Casper theme subproject to c8abe3a
+Clarified Layer3DCamera's position and rotation properties in doc comments
+"Update stale bot message to include link to FAQ"
+"Replace gatsby-transformer-remark with gatsby-transformer-sharp in mdx-images recipe"
+Update import path for CapturedNamedArguments in process-args.ts
+`Increase NUM_GROUPS to 12 and RUNNING_AVG_LENGTH to 6 for load-balancing configuration`
+Implement finally block to reset saveInProgress state after PDF download attempt
+Correct typo in RULES-esla.md documentation
+Add Coronavirus (COVID-19) Tracker project to sites documentation.
+Fix continue list behavior to handle quotes and empty list items
+Update bug report template to remove specific environment details.
+Update @serverless/enterprise-plugin to ^3.8.1 in package.json
+Refactor compare-runs script to conditionally append lhFlags to arguments
+"Add minimum-scale=1 to viewport meta for improved mobile responsiveness."
+Fix tsconfig loading in webpack options to use project-specific config
+Fix typo in static-vs-normal-queries documentation.
+Ensure events array presence with null-safe access in Mailgun email analytics provider
+"Remove zIndex from FormControl styles to fix blur label text issue"
+"Update AppVeyor cache settings to include appveyor.yml and package.json changes"
+Optimize npm install step to use 'npm ci' for faster CI builds
+Adjust webpQuality and metadata handling in gatsby-plugin-sharp
+Update @types/react-virtualized to 9.21.7 in yarn.lock
+Add debug log and hardcoded BrowserStack key to _getBrowserStackKey method
+Add 'diff' link to test page for improved navigation
+"Add conditional to BrowserStack workflow to skip CI for specific commit messages"
+Fix picker scroll issue by adding event modifiers to stop propagation
+Update RCTFabricSurface.h comments to reflect automatic deallocation behavior
+Added Device Shots to the list of mockup tools in README.md
+Bump MongoDB version from 3.5.9 to 3.5.10 in package.json
+Add new Gatsby theme blog code block component with Prism and MDX utils support
+"Ensure proxy-module prefix compatibility in server middleware handling"
+Update `format` function documentation to include `options.parser` usage
+Add Awesome Design UI Kits link to Awesome Design Conferences page
+Add gradle assembly step to CircleCI config and remove env print step
+Add Thomas Wang's Blog to sites documentation
+Refactor element-picker logic to include currentSrc in filter conditions
+Update ellipse size and position in setSize method
+Update vizion dependency to version ~2.2.0
+Refactor wrapDataStream function signature for clearer options handling
+Update nw_src_revision to a1d2746a0cc21afdae294767d5f0c01a3b1d798
+Fix tracker syncing flag reset to correctly occur on catch instead of finally
+Export 'Scene' type for external use in SceneTracker module.
+Update version from 1.29.1.8 to 1.29.3.0
+Update workflow to clone uAssets repository before building packages
